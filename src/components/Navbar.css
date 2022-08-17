@@ -1,0 +1,35 @@
+.MainNavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F6F5F0;
+    border-bottom: 1px solid #c8c8c8;
+    height: 100px;
+}
+.MainLogo{
+    font-size: 60px;
+    font-weight: 700;
+}
+.MainMenu{
+    padding-right: 30px;
+    margin: 30px;
+}
+.MainMenu button{
+    border: none;
+    background-color: #F6F5F0;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.MainMenu button:hover{
+    color: #669900;
+    font-size: 35px;
+}
+.MainMenu button:focus{
+    color: green;
+    font-size: 35px;
+}
+.MainMenu span{
+    font-size: 27px;
+    font-weight: 700;
+    color: burlywood;
+}

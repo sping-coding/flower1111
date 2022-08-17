@@ -1,0 +1,204 @@
+*{
+  box-sizing: border-box;
+}
+.MainHeader{
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+.MainHeader1{
+  width: 33%;
+  background-color: beige;
+}
+.MainHeader2{
+  width: 33%;
+  background-repeat: no-repeat;
+  background-image: url("./images/KakaoTalk_20220817_161106901.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MainHeader2T{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid tomato;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.MainHeader3{
+  width: 33%;
+  background-color: beige;
+}
+
+/* 메인 화면 전환 페이지 */
+.swiper {
+  border: 1px solid black;
+  margin-top: 50px;
+  width: 100%;
+  height: 1000px;
+  margin-bottom: 0px;
+}
+
+.swiper-slide {
+  background: black;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 600px;
+  height: 600px;
+  object-fit: 100%;
+}
+
+
+.HomepageRanks{
+
+}
+
+
+/* Empty page */
+
+.mainEmpty{
+  height: 1000px;
+  margin: 0;
+}
+
+.gray{
+  background-color: #f9f9f9;
+}
+
+/* 홈페이지 change */
+
+.HomepageChangeBoxs{
+  font-size: 20px;
+}
+.mainChange{
+  display: flex;
+  justify-content: center;
+}
+.HomepageChangeBoxFirst{
+  display: flex;
+  justify-content: space-around;
+  background-color: #272727;
+}
+.HomepageChangeBoxSecond{
+  display: flex;
+  justify-content: space-around;
+}
+
+.HomepageChangeBtnF{
+  width: 170px;
+  height: 70px;
+  font-size: 37px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: none;
+}
+.HomepageChangeBtnS{
+  width: 170px;
+  height: 70px;
+  font-size: 37px;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+  border: none;
+}
+.HomepageChangeBoxImgF{
+  width: 450px;
+  height: 450px;
+}
+.HomepageChangeBoxImgS{
+  width: 450px;
+  height: 450px;
+}
+
+/* footer */
+
+footer {
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+footer .menu li {
+  position: relative;
+  list-style: none;
+}
+footer .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .menu li:last-child::before {
+  display: none;
+}
+footer .menu li a {
+  display: block;
+  color: #CCC;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+footer .info span:last-child {
+  margin-right: 0;
+}
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo {
+  margin: 30px auto 0;
+}
