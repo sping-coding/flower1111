@@ -6,6 +6,7 @@ import HomepageChange from "../components/HomepageChange";
 import Footer from "../components/Footer";
 import MainSecondHeader from "../components/MainSecondHeader";
 import MainSecondPicChange from "../components/MainSecondPicChange";
+import MainPopular from "../components/MainPopular";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       </div>
       <MainSecondHeader />
       <MainSecondPicChange />
+      <MainPopular />
       <div className="mainEmpty"></div>
       <MainSwiper />
       <div className="mainEmpty gray">

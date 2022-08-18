@@ -70,12 +70,12 @@
 .MainSecondHeaderItemsGrass img{
   border-top-left-radius: 130px;
   border-top-right-radius: 130px;
-  border:5px solid tomato;
+  border:5px solid blanchedalmond;
 }
 .MainSecondHeaderItemsPackage img{
   border-top-left-radius: 130px;
   border-top-right-radius: 130px;
-  border:5px solid gainsboro
+  border:5px solid blanchedalmond;
 }
 
 .reserve-store{
@@ -83,7 +83,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: gainsboro;
+  background-color: #F5F5F5;
 }
 .MainSecondSide{
   width: 5%;
@@ -121,7 +121,7 @@
 .reserve-store .medal:hover .back {
   transform: rotateY(0deg);
   background-color: #FEE6DA;
-  border: 3px solid tomato;
+  border: 3px solid #E6cdba;
   width: 500px;
   height: 300px;
 }
@@ -132,9 +132,44 @@
   right: 0;
   margin-top: 50px;
 }
+.MainPopularBox{
+  background-color: #E6cdba;
+  height: 500px;
+}
 
-
-
+/* 인기상품 컴포넌트 */
+.MainPopularBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.MainPopularBox h2{
+  margin-top: 0px;
+  text-align: center;
+  font-style: italic;
+  font-size: 47px;
+}
+.MainPopularBoxPics{
+  padding-top: 7px;
+  display: flex;
+  justify-content: space-around;
+}
+.MainPopularBoxLink{
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  color: green;
+  transition: all .5s ease-in-out;
+}
+.MainPopularBoxLink:hover{
+  font-size: 35px;
+  color: tomato;
+  border-radius: 87px;
+}
+.MainPopularBoxLink span{
+  font-weight: 800;
+  font-size: 37px;
+}
 
 
 
@@ -305,4 +340,8 @@ footer .copyright {
 }
 footer .logo {
   margin: 30px auto 0;
+}
+
+.p{
+  width: 200px;
 }
