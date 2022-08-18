@@ -4,6 +4,8 @@ import "swiper/css/bundle";
 import MainSwiper from "../components/MainSwiper";
 import HomepageChange from "../components/HomepageChange";
 import Footer from "../components/Footer";
+import MainSecondHeader from "../components/MainSecondHeader";
+import MainSecondPicChange from "../components/MainSecondPicChange";
 
 const HomePage = () => {
   return (
@@ -18,7 +20,8 @@ const HomePage = () => {
         </div>
         <div className="MainHeader3"></div>
       </div>
-
+      <MainSecondHeader />
+      <MainSecondPicChange />
       <div className="mainEmpty"></div>
       <MainSwiper />
       <div className="mainEmpty gray">
