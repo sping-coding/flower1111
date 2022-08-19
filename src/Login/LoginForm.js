@@ -35,7 +35,7 @@ const LoginForm = () => {
         console.log("handleLogin =>", res);
         if (res.data[0].cnt === 1) {
           window.sessionStorage.setItem("id", idRef.current.value);
-          navigate("/products");
+          navigate("/");
         } else {
           alert("로그인 실패");
           navigate("/");
