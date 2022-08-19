@@ -12,6 +12,7 @@
     font-weight: 300;
     color: white;
     padding-left: 25px;
+    cursor: pointer;
 }
 .MainMenu{
     padding-right: 30px;
