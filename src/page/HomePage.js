@@ -24,6 +24,7 @@ const HomePage = () => {
       <MainSecondHeader />
       <MainSecondPicChange />
       <MainPopular />
+      <HomepageChange />
       <div className="mainEmpty"></div>
       <MainSwiper />
       <div className="mainEmpty gray">
@@ -44,7 +45,6 @@ const HomePage = () => {
           Flower
         </h1>
       </div>
-      <HomepageChange />
       <Footer />
     </div>
   );

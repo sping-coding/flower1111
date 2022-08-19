@@ -12,13 +12,18 @@ const Navbar = () => {
   const goToLogin = () => {
     navigate("/login");
   };
+
+  const goToBoard = () => {
+    navigate("/board");
+  };
+
   return (
     <div className="MainNavBar">
       <div className="MainLogo">Caerulea</div>
       <div className="MainMenu">
         <button onClick={goToProduct}>쇼핑몰</button>
         <span>I</span>
-        <button>커뮤니티</button>
+        <button onClick={goToBoard}>커뮤니티</button>
         <span>I</span>
         <button>공지사항</button>
         <span>I</span>
