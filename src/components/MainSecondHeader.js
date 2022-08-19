@@ -6,7 +6,7 @@ import 두번째포장지 from "../images/두번째포장지2.jpg";
 const MainSecondHeader = () => {
   return (
     <div className="MainSecondHeaderItems">
-      <h1>크룰리아</h1>
+      <h1>About 크룰리아</h1>
       <div className="MainSecondHeaderItemsPics">
         <div className="MainSecondHeaderItemsFlower">
           <img src={두번째꽃} />

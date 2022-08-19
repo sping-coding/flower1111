@@ -1,23 +1,26 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import HomepageChangeBox from "./HompageChangeBox";
-import mainslide1 from "../images/mainslide1.png";
+import first from "../images/last1.jpg";
+import second from "../images/last2.jpg";
+import third from "../images/last3.png";
+import forth from "../images/last4.png";
 
 const HomepageChange = () => {
   const [buttonSelect, setButtonSelect] = useState([]);
 
   const choice = {
     first: {
-      name: `${mainslide1}`,
-      p: "pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp",
-      p2: "pppppppppppppppppppppppppppppppppppppppppppppppppppp",
-      name2: `${mainslide1}`,
+      name: `${first}`,
+      p: "크룰리아 No.1 화이트박스",
+      p2: "크룰리아 No.1 그레이박스",
+      name2: `${second}`,
     },
     second: {
-      name: `${mainslide1}`,
-      p: "ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp",
-      p2: "ppppppppppppppppppppppppppppppppppppppppppppppppppp",
-      name2: `${mainslide1}`,
+      name: `${third}`,
+      p: "크룰리아 Premium 브라운",
+      p2: "크룰리아 Premium 핑크",
+      name2: `${forth}`,
     },
   };
 
@@ -30,13 +33,14 @@ const HomepageChange = () => {
   }, []);
 
   return (
-    <div>
+    <div className="HomepageChanges">
+      <h2>Pick your favorite</h2>
       <div className="mainChange">
         <button className="HomepageChangeBtnF" onClick={() => play("first")}>
-          first
+          Box
         </button>
         <button className="HomepageChangeBtnS" onClick={() => play("second")}>
-          second
+          Paper
         </button>
       </div>
       <div className="main">

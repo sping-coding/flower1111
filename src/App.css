@@ -7,13 +7,13 @@
   height: 700px;
 }
 .MainHeader1{
-  width: 33%;
+  width: 20%;
   background-color: beige;
 }
 .MainHeader2{
-  width: 33%;
   background-repeat: no-repeat;
   background-image: url("./images/KakaoTalk_20220817_161106901.jpg");
+  /* background-color: beige; */
   background-size: cover;
   flex-grow: 1;
   display: flex;
@@ -30,7 +30,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .MainHeader3{
-  width: 33%;
+  width: 20%;
   background-color: beige;
 }
 
@@ -154,6 +154,11 @@
   display: flex;
   justify-content: space-around;
 }
+.MainPopularBoxPics img{
+  width: 200px;
+  height: 250px;
+  border: 3px solid sandybrown;
+}
 .MainPopularBoxLink{
   text-align: center;
   font-size: 30px;
@@ -171,19 +176,51 @@
   font-size: 37px;
 }
 
+/* 홈페이지 카드부분 */
+.MainSecondCards{
+  height: 1200px;
+  display: flex;
+}
+.MainSecondCardsFirst{
+  border-right: 2px solid green;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.MainSecondCardsFirst:first-child{
+  font-size: 37px;
+  font-weight: 700;
+  text-align: center;
+}
+.MainSecondCardsSecond{
+  border-left :2px solid green;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.MainSecondCards img{
+  height: 370px;
+}
+.MainSecondCardsSecondFirstImg{
+  margin-bottom: 100px;
+}
+.MainSecondCardsSecondSecondImg{
+  margin-bottom: 200px;
+}
 
 
 /* 메인 화면 전환 페이지 */
 .swiper {
-  border: 1px solid black;
   margin-top: 50px;
-  width: 100%;
-  height: 1000px;
+  width: 80%;
+  height: 600px;
   margin-bottom: 0px;
 }
 
 .swiper-slide {
-  background: black;
+  background: white;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -203,32 +240,23 @@
 .swiper-slide img {
   display: block;
   width: 600px;
-  height: 600px;
+  height: 400px;
   object-fit: 100%;
 }
 
 
-.HomepageRanks{
-
-}
 
 
-/* Empty page */
 
-.mainEmpty{
-  height: 1000px;
-  margin: 0;
-}
-
-.gray{
-  background-color: #f9f9f9;
-}
 
 /* 홈페이지 change */
-
-.HomepageChangeBoxs{
-  font-size: 20px;
+.HomepageChanges h2{
+  text-align: center;
+  font-size: 37px;
+  font-family: Arial, Helvetica, sans-serifs;
+  font-weight: 700;
 }
+
 .mainChange{
   display: flex;
   justify-content: center;
@@ -236,38 +264,66 @@
 .HomepageChangeBoxFirst{
   display: flex;
   justify-content: space-around;
-  background-color: #272727;
+  background-color: #E6cdba;
+  height: 300px;
 }
+.HomepageChangeBoxFirst h3{
+  text-align: center;
+  padding-top: 100px;
+  font-size: 27px;
+  margin-right:  40px;
+} 
+
 .HomepageChangeBoxSecond{
   display: flex;
   justify-content: space-around;
+  height: 300px;
+  background-color: beige;
 }
-
+.HomepageChangeBoxSecond h3{
+  text-align: center;
+  padding-top: 100px;
+  font-size: 27px;
+  margin-right:  40px;
+}
 .HomepageChangeBtnF{
-  width: 170px;
+  width: 120px;
   height: 70px;
-  font-size: 37px;
+  font-size: 27px;
   cursor: pointer;
-  background-color: #f9f9f9;
+  background-color: burlywood;
+  color: whitesmoke;
   border: none;
+  transition: 0.5s ease-out;
+  margin-bottom: 40px;
+}
+.HomepageChangeBtnF:hover{
+  font-size: 37px;
+  transition: 0.5s ease-out;
+}
+.HomepageChangeBtnF:focus{
+  font-size: 37px;
+  background-color: sandybrown;
 }
 .HomepageChangeBtnS{
-  width: 170px;
+  width: 120px;
   height: 70px;
-  font-size: 37px;
+  font-size: 27px;
   cursor: pointer;
-  background-color: gray;
+  background-color: sienna;
   color: white;
   border: none;
+  transition: 0.5s ease-out;
 }
-.HomepageChangeBoxImgF{
-  width: 450px;
-  height: 450px;
+.HomepageChangeBtnS:hover{
+  font-size: 37px;
+  transition: 0.5s ease-out;
 }
-.HomepageChangeBoxImgS{
-  width: 450px;
-  height: 450px;
+.HomepageChangeBtnS:focus{
+  font-size: 37px;
+  background-color: brown;
 }
+
 
 /* footer */
 
@@ -340,10 +396,6 @@ footer .copyright {
 }
 footer .logo {
   margin: 30px auto 0;
-}
-
-.p{
-  width: 200px;
 }
 
 

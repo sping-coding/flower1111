@@ -1,9 +1,10 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import mainslide1 from "../images/mainslide1.png";
-import mainslide2 from "../images/mainslide2.png";
-import mainslide3 from "../images/mainslide3.png";
+import first from "../images/3.png";
+import second from "../images/4.png";
+import thired from "../images/8.png";
+import fourth from "../images/9.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,13 +25,16 @@ const MainSwiper = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img className="slidePictur" src={mainslide1} />
+          <img className="slidePictur" src={first} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="slidePictur" src={mainslide2} />
+          <img className="slidePictur" src={second} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="slidePictur" src={mainslide3} />
+          <img className="slidePictur" src={thired} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="slidePictur" src={fourth} />
         </SwiperSlide>
       </Swiper>
     </>

@@ -84,115 +84,94 @@ const MemberForm = () => {
   return (
     <div>
       <form>
-        <table border="1" width="300px" align="center">
-          {/* 아이디 */}
-          <tr>
-            <td>ID</td>
-            <td>
-              <input
-                type="text"
-                name="id"
-                ref={idRef}
-                placeholder="아이디를 입력하세요"
-                defaultValue=""
-              />
-            </td>
-          </tr>
-          {/* 비밀번호 */}
-          <tr>
-            <td>PW</td>
-            <td>
-              <input
-                type="password"
-                name="pw"
-                ref={pwRef}
-                placeholder="영문+숫자+특수문자 8자리"
-                defaultValue=""
-              />
-            </td>
-          </tr>
-          {/* 비밀번호 확인 */}
-          <tr>
-            <td>PWcheck</td>
-            <td>
-              <input
-                type="password"
-                name="pwch"
-                ref={pwchRef}
-                defaultValue=""
-                placeholder="비밀번호를 확인해주세요"
-              />
-            </td>
-          </tr>
-          {/* 닉네임 */}
-          <tr>
-            <td>NickName</td>
-            <td>
-              <input
-                type="text"
-                name="nickname"
-                ref={nickRef}
-                placeholder="닉네임을 입력하세요"
-                defaultValue=""
-              />
-            </td>
-          </tr>
-          {/* 주소 */}
-          <tr>
-            <td>Addr</td>
-            <td>
-              <input
-                type="text"
-                name="addr"
-                ref={addrRef}
-                placeholder="주소를 입력하세요"
-                defaultValue=""
-              />
-            </td>
-          </tr>
-          {/* 휴대폰 */}
-          <tr>
-            <td>Mobile</td>
-            <td>
-              <input
-                type="tel"
-                name="mobile1"
-                ref={mobile1Ref}
-                placeholder="3자리"
-                size="3"
-                maxLength="3"
-              />
-              -
-              <input
-                type="tel"
-                name="mobile2"
-                ref={mobile2Ref}
-                placeholder="4자리"
-                size="4"
-                maxLength="4"
-              />
-              -
-              <input
-                type="tel"
-                name="mobile3"
-                ref={mobile3Ref}
-                placeholder="4자리"
-                size="4"
-                maxLength="4"
-              />
-            </td>
-          </tr>
-          {/* 회원등록 */}
-          <tr>
-            <td colSpan="2" align="center">
-              <input
-                type="button"
-                value="registration"
-                onClick={handleMember}
-              />
-            </td>
-          </tr>
-        </table>
+        <h1>CAERULEA</h1>
+        <div>
+          <h3>ID</h3>
+          <div>
+            <input
+              type="text"
+              name="id"
+              ref={idRef}
+              placeholder="아이디를 입력하세요"
+              defaultValue=""
+            />
+          </div>
+          <h3>PW</h3>
+          <div>
+            <input
+              type="password"
+              name="pw"
+              ref={pwRef}
+              placeholder="영문+숫자+특수문자 8자리"
+              defaultValue=""
+            />
+          </div>
+          <h3>PWcheck</h3>
+          <div>
+            <input
+              type="password"
+              name="pwch"
+              ref={pwchRef}
+              defaultValue=""
+              placeholder="비밀번호를 확인해주세요"
+            />
+          </div>
+          <h3>NickName</h3>
+          <div>
+            <input
+              type="text"
+              name="nickname"
+              ref={nickRef}
+              placeholder="닉네임을 입력하세요"
+              defaultValue=""
+            />
+          </div>
+          <h3>Addr</h3>
+          <div>
+            <input
+              type="text"
+              name="addr"
+              ref={addrRef}
+              placeholder="주소를 입력하세요"
+              defaultValue=""
+            />
+          </div>
+          <h3>Mobile</h3>
+          <div>
+            <input
+              type="tel"
+              name="mobile1"
+              ref={mobile1Ref}
+              placeholder="3자리"
+              size="3"
+              maxLength="3"
+            />
+            -
+            <input
+              type="tel"
+              name="mobile2"
+              ref={mobile2Ref}
+              placeholder="4자리"
+              size="4"
+              maxLength="4"
+            />
+            -
+            <input
+              type="tel"
+              name="mobile3"
+              ref={mobile3Ref}
+              placeholder="4자리"
+              size="4"
+              maxLength="4"
+            />
+          </div>
+          <div>
+            <br></br>
+          </div>
+          <div>
+            <input type="button" value="registration" onClick={handleMember} />
+          </div>
+        </div>
       </form>
     </div>
   );

@@ -39,9 +39,9 @@ const Footer = () => {
 
         <div class="info">
           <span>사업자등록번호 201-81-21515</span>
-          <span>(주)클로레라</span>
-          <span>TEL : 062) 3015-1100 / FAX : 062) 3015-1106</span>
-          <span>개인정보 책임자 : 박 훈</span>
+          <span>(주)크룰리아</span>
+          <span>TEL : 010) 4622-2173 / FAX : 063) 653-2173</span>
+          <span>통합 책임자 : 박 훈</span>
         </div>
 
         <p class="copyright">

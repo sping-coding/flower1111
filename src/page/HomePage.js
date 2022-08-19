@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import MainSecondHeader from "../components/MainSecondHeader";
 import MainSecondPicChange from "../components/MainSecondPicChange";
 import MainPopular from "../components/MainPopular";
+import MainSecondCard from "../components/MainSecondCard";
 
 const HomePage = () => {
   return (
@@ -22,29 +23,11 @@ const HomePage = () => {
         <div className="MainHeader3"></div>
       </div>
       <MainSecondHeader />
-      <MainSecondPicChange />
+      {/* <MainSecondPicChange /> */}
+      {/* <MainSecondCard /> */}
+      <MainSwiper />
       <MainPopular />
       <HomepageChange />
-      <div className="mainEmpty"></div>
-      <MainSwiper />
-      <div className="mainEmpty gray">
-        <div>
-          <h1>
-            감동을 만들어 드립니다
-            <br />
-            어쩌구 저쩌구
-          </h1>
-        </div>
-      </div>
-      <div className="mainEmpty">
-        <h1>
-          Premium
-          <br />
-          Customisation
-          <br />
-          Flower
-        </h1>
-      </div>
       <Footer />
     </div>
   );

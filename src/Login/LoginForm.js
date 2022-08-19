@@ -53,54 +53,40 @@ const LoginForm = () => {
 
   return (
     <div>
-      <p></p>
       <form>
+        <h1>CAERULEA</h1>
+        <h3>ID</h3>
         <div>
-          {/* 아이디 */}
-          {/* <tr>
-            <td width="100px">아이디</td>
-            <td align="left" width="200px"> */}
-
-          <div>
-            <input
-              type="text"
-              name="id"
-              size="20"
-              ref={idRef}
-              placeholder="아이디를 입력하세요"
-            ></input>
-          </div>
-          {/* </td>
-          </tr> */}
-          {/* 패스워드 */}
-          {/* <tr>
-            <td width="100px">패스워드</td>
-            <td align="left" width="200px"> */}
-          <div>
-            <input
-              type="password"
-              name="pw"
-              size="20"
-              ref={pwRef}
-              placeholder="비밀번호를 입력해주세요"
-            ></input>
-          </div>
-          {/* </td>
-          </tr> */}
-          {/* <tr> */}
-          {/* 로그인 + 회원등록 */}
-          {/* <td colSpan="2" align="center"> */}
-          <div>
-            <input type="button" value="로그인" onClick={handleLogin}></input>
-            &nbsp;
-            <input
-              type="button"
-              value="회원등록"
-              onClick={handleMemberForm}
-            ></input>
-          </div>
-          {/* </td>
-          </tr> */}
+          <input
+            type="text"
+            name="id"
+            size="20"
+            ref={idRef}
+            placeholder="아이디를 입력하세요"
+          ></input>
+        </div>
+        <h3>PW</h3>
+        <div>
+          <input
+            type="password"
+            name="pw"
+            size="20"
+            ref={pwRef}
+            // placeholder="영문+숫자+특수문자 8자리 이상으로 설정해주세요"
+            // errorMsg={errors.password && "올바른 형식이 아닙니다!"}
+          ></input>
+        </div>
+        <div>
+          <br></br>
+        </div>
+        <div>
+          <input type="button" value="로그인" onClick={handleLogin}></input>
+          &nbsp;
+          <input
+            type="button"
+            value="회원등록"
+            onClick={handleMemberForm}
+          ></input>
         </div>
       </form>
     </div>
