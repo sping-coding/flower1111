@@ -9,9 +9,9 @@ const MemberForm = () => {
   const pwchRef = useRef(); //비밀번호 확인
   const nickRef = useRef(); //닉네임
   const addrRef = useRef(); //주소
-  const mobile1Ref = useRef(); //휴대폰 -> 앞3자리
-  const mobile2Ref = useRef(); //휴대폰 -> 중간4자리
-  const mobile3Ref = useRef(); //휴대폰 -> 끝4자리
+  const telRef = useRef(); //휴대폰 -> 앞3자리
+  // const mobile2Ref = useRef(); //휴대폰 -> 중간4자리
+  // const mobile3Ref = useRef(); //휴대폰 -> 끝4자리
 
   const navigate = useNavigate();
 
@@ -40,12 +40,9 @@ const MemberForm = () => {
       addrRef.current.focus();
       return false;
     }
-    if (
-      mobile1Ref.current.value === "" ||
-      mobile1Ref.current.value === undefined
-    ) {
+    if (telRef.current.value === "" || telRef.current.value === undefined) {
       alert("휴대폰번호를 입력하세요!!!");
-      mobile1Ref.current.focus();
+      telRef.current.focus();
       return false;
     }
 
@@ -62,9 +59,9 @@ const MemberForm = () => {
         pw: pwRef.current.value, //비밀번호
         nickname: nickRef.current.value, //닉네임
         addr: addrRef.current.value, //주소
-        mobile1: mobile1Ref.current.value, //휴대폰 ->앞3자리
-        mobile2: mobile2Ref.current.value, //휴대폰 ->중간4자리
-        mobile3: mobile3Ref.current.value, //휴대폰 ->끝4자리
+        tel: telRef.current.value, //휴대폰 ->앞3자리
+        // mobile2: mobile2Ref.current.value, //휴대폰 ->중간4자리
+        // mobile3: mobile3Ref.current.value, //휴대폰 ->끝4자리
       })
       .then((res) => {
         console.log("handleMember =>", res);
@@ -140,13 +137,13 @@ const MemberForm = () => {
           <div>
             <input
               type="tel"
-              name="mobile1"
-              ref={mobile1Ref}
-              placeholder="3자리"
-              size="3"
-              maxLength="3"
+              name="tel"
+              ref={telRef}
+              placeholder="11자리"
+              size="11"
+              maxLength="11"
             />
-            -
+            {/* -
             <input
               type="tel"
               name="mobile2"
@@ -163,7 +160,7 @@ const MemberForm = () => {
               placeholder="4자리"
               size="4"
               maxLength="4"
-            />
+            /> */}
           </div>
           <div>
             <br></br>

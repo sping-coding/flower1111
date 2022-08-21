@@ -21,7 +21,7 @@ const db = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "123456",
-  database: "bbs",
+  database: "project",
   // port번호 생략하면 기본값 3306 지정되어있음
 });
 
@@ -30,7 +30,8 @@ app.post("/login", (req, res) => {
   var id = req.body.id;
   var pw = req.body.pw;
 
-  const sqlQuery = "select count(*) as 'cnt' from member where id=? and pw=?;"; //count의 별칭 = 'cnt'
+  const sqlQuery =
+    "select count(*) as 'cnt' from user_tbl where id=? and pw=?;"; //count의 별칭 = 'cnt'
   db.query(sqlQuery, [id, pw], (err, result) => {
     res.send(result); //
   });
@@ -41,20 +42,95 @@ app.post("/member", (req, res) => {
   var pw = req.body.pw;
   var nickname = req.body.nickname;
   var addr = req.body.addr;
-  var mobile1 = req.body.mobile1;
-  var mobile2 = req.body.mobile2;
-  var mobile3 = req.body.mobile3;
-  console.log(id, pw, nickname, addr, mobile1, mobile2, mobile3);
+  var tel = req.body.tel;
+  // var mobile2 = req.body.mobile2;
+  // var mobile3 = req.body.mobile3;
+  console.log(id, pw, nickname, addr, tel);
   const sqlQuery =
-    "insert into member(id, pw, nickname, addr, mobile1, mobile2, mobile3) values (?,?,?,?,?,?,?);";
-  db.query(
-    sqlQuery,
-    [id, pw, nickname, addr, mobile1, mobile2, mobile3],
-    (err, result) => {
-      console.log(result);
-      res.send(result);
-    }
-  );
+    "insert into user_tbl(id, pw, nickname, addr, tel) values (?,?,?,?,?);";
+  db.query(sqlQuery, [id, pw, nickname, addr, tel], (err, result) => {
+    console.log(result);
+    res.send(result);
+  });
+});
+
+app.post("/board/list", (req, res) => {
+  console.log("list!!!");
+  var page_num = parseInt(req.body.page_num);
+  var page_size = parseInt(req.body.page_size);
+
+  console.log("list!!!(page_num, page_size)", page_num, ", ", page_size);
+
+  const start_limit = (page_num - 1) * page_size;
+  console.log("list!!!(start_limit, end_limit)", start_limit, ", ", page_size);
+
+  const sqlQuery =
+    "SELECT BOARD_NUM, TITLE, CONTENTS, WRITER, DATE_FORMAT(TIME, '%Y-%m-%d') AS TIME FROM BOARD_TBL order by num desc limit ?,?;";
+  db.query(sqlQuery, [start_limit, page_size], (err, result) => {
+    // select문 결과를 클라이언트에게 반환
+    res.send(result);
+  });
+});
+
+app.get("/board/count", (req, res) => {
+  console.log("count!!!");
+  const sqlQuery = "select count(*) as COUNT from board_tbl;";
+  db.query(sqlQuery, (err, result) => {
+    res.send(result);
+  });
+});
+
+app.post("/board/insert", (req, res) => {
+  console.log("/insert", req.body);
+  var writer = req.body.writer;
+  var title = req.body.title;
+  var contents = req.body.contents;
+
+  const sqlQuery =
+    "INSERT INTO BOARD_TBL (WRITER, TITLE, CONTENTS) values(?,?,?);";
+  // ? : 파라미터로 전달받겠다
+  // [writer, title, content]
+  db.query(sqlQuery, [writer, title, contents], (err, result) => {
+    // insert는 반환 x
+    // null값 반환
+    res.send(result);
+  });
+});
+
+app.post("/board/detail", (req, res) => {
+  console.log("/detail", req.body);
+  var num = parseInt(req.body.num);
+
+  const sqlQuery =
+    "SELECT NUM, WRITER, TITLE,CONTENTS, DATE_FORMAT(TIME,'%Y-%m-%d') AS TIME FROM BOARD_TBL where NUM = ?;";
+  db.query(sqlQuery, [num], (err, result) => {
+    res.send(result);
+  });
+});
+
+app.post("/board/update", (req, res) => {
+  console.log("/update", req.body);
+  var title = req.body.article.board_title;
+  var contents = req.body.article.board_contents;
+  var num = req.body.article.board_num;
+
+  const sqlQuery =
+    "update BOARD_TBL set TITLE=?, CONTENTS=?,TIME=now() where num=?;";
+  db.query(sqlQuery, [title, contents, num], (err, result) => {
+    res.send(result);
+    console.log("result=", result);
+  });
+});
+
+app.post("/board/delete", (req, res) => {
+  const num = req.body.num;
+  console.log("/delete(id) => ", num);
+
+  const sqlQuery = "DELETE FROM BOARD_TBL WHERE NUM = ?;";
+  db.query(sqlQuery, [num], (err, result) => {
+    console.log(err);
+    res.send(result);
+  });
 });
 
 app.listen(PORT, () => {

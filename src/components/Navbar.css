@@ -6,13 +6,18 @@
     background-color: #cfcaca;
     border-bottom: 1px solid #c8c8c8;
     height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
 }
 .MainLogo{
-    font-size: 40px;
-    font-weight: 300;
     color: white;
     padding-left: 25px;
     cursor: pointer;
+}
+.MainLogo img{
+    width: 200px;
 }
 .MainMenu{
     padding-right: 30px;
@@ -25,10 +30,10 @@
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-.MainMenu button:hover{
+/* .MainMenu button:hover{
     color: ghostwhite;
     font-size: 35px;
-}
+} */
 .MainMenu button:focus{
     color: green
 }

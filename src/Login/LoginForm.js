@@ -9,6 +9,10 @@ const LoginForm = () => {
 
   const navigate = useNavigate();
 
+  const gotoHome = () => {
+    navigate("/");
+  };
+
   const handleLogin = () => {
     if (idRef.current.value === "" || idRef.current.value === undefined) {
       alert("아이디를 입력하세요!!!");
