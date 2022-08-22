@@ -1,17 +1,15 @@
+import "./LoginForm.css";
 // 로그인
 import { useRef } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { IoIosText } from "react-icons/io";
 
 const LoginForm = () => {
   const idRef = useRef();
   const pwRef = useRef();
 
   const navigate = useNavigate();
-
-  const gotoHome = () => {
-    navigate("/");
-  };
 
   const handleLogin = () => {
     if (idRef.current.value === "" || idRef.current.value === undefined) {
@@ -56,43 +54,62 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className="LoginForms" align="center">
       <form>
         <h1>CAERULEA</h1>
-        <h3>ID</h3>
         <div>
           <input
+            className="ID"
             type="text"
             name="id"
             size="20"
             ref={idRef}
-            placeholder="아이디를 입력하세요"
+            placeholder="아이디"
           ></input>
         </div>
-        <h3>PW</h3>
+        &nbsp;
         <div>
           <input
+            className="PW"
             type="password"
             name="pw"
             size="20"
             ref={pwRef}
-            // placeholder="영문+숫자+특수문자 8자리 이상으로 설정해주세요"
+            placeholder="비밀번호"
             // errorMsg={errors.password && "올바른 형식이 아닙니다!"}
           ></input>
         </div>
         <div>
           <br></br>
         </div>
-        <div>
-          <input type="button" value="로그인" onClick={handleLogin}></input>
-          &nbsp;
+        <p>
           <input
+            className="login"
             type="button"
-            value="회원등록"
-            onClick={handleMemberForm}
+            value="로그인"
+            onClick={handleLogin}
           ></input>
+        </p>
+        <div>
+          <hr></hr>
+          <a href="#">아이디 찾기</a>|<a href="#">비밀번호 찾기</a>|
+          <Link to="/member">회원등록</Link>
+          <hr></hr>
+        </div>
+        <br></br>
+        <div className="kakaoL">
+          <div className="icon">
+            <IoIosText size="25" />{" "}
+          </div>
+          <span className="klog">카카오 로그인</span>
+        </div>
+        <br></br>
+        <div className="NaverL">
+          <div className="N">N</div>
+          <span className="nlog">네이버 로그인</span>
         </div>
       </form>
+      <div></div>
     </div>
   );
 };

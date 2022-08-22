@@ -10,11 +10,11 @@ const MainSecondHeader = () => {
       <div className="MainSecondHeaderItemsPics">
         <div className="MainSecondHeaderItemsFlower">
           <img src={두번째꽃} />
-          <span>40여종 이상의 꽃을 고를수 있다</span>
+          <span>40여종 이상의 꽃</span>
         </div>
         <div className="MainSecondHeaderItemsGrass">
           <img src={두번째풀} />
-          <span>꽃의 가치를 올려줄 그린소재</span>
+          <span>꽃의 가치를 올려줄 다양한 그린소재</span>
         </div>
         <div className="MainSecondHeaderItemsPackage">
           <img src={두번째포장지} />

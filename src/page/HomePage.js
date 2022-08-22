@@ -8,6 +8,7 @@ import MainSecondHeader from "../components/MainSecondHeader";
 import MainSecondPicChange from "../components/MainSecondPicChange";
 import MainPopular from "../components/MainPopular";
 import MainSecondCard from "../components/MainSecondCard";
+import MainVideo from "../components/MainVideo";
 
 const HomePage = () => {
   return (
@@ -26,6 +27,7 @@ const HomePage = () => {
       {/* <MainSecondPicChange /> */}
       {/* <MainSecondCard /> */}
       <MainSwiper />
+      <MainVideo />
       <MainPopular />
       <HomepageChange />
       <Footer />

@@ -49,13 +49,12 @@ const Navbar = () => {
           <button>
             <Dropdown>
               <Dropdown.Toggle variant="dark">
-                <BsPerson />
+                <BsPerson className="navPerson" />
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
                 <Dropdown.Item onClick={goToLogin}>로그인</Dropdown.Item>
                 <Dropdown.Item onClick={goToMember}>회원가입</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </button>
@@ -76,7 +75,7 @@ const Navbar = () => {
           <button>
             <Dropdown>
               <Dropdown.Toggle variant="dark">
-                <BsPersonFill />
+                <BsPersonFill className="navPerson" />
               </Dropdown.Toggle>
 
               <Dropdown.Menu>

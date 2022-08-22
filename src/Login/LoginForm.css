@@ -1,0 +1,85 @@
+.LoginForms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.ID{
+    border: none;
+    border-bottom: 3px solid grey;
+    height: 20px;
+    width: 200px;
+    background-color: whitesmoke(197, 191, 191);
+}
+.ID:focus{
+    outline: none;
+
+}
+.PW{
+    border: none;
+    border-bottom: 3px solid grey;
+    height: 20px;
+    width: 200px;
+    background-color: whitesmoke(197, 191, 191);
+}
+.PW:focus{
+    outline: none;
+}
+
+.login{
+    width: 200px;
+    color: white;
+    background-color: black;
+}
+
+
+.NaverL{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 183px;
+    height: 45px;
+    background-color: #03C75A;
+    border-radius: 5px 5px;
+    /* color: white; */
+    cursor: pointer;
+}
+.N{
+    color: white;
+    font-weight: 1000;
+    font-size: large;
+}
+.nlog{
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    padding-right: 25px;
+}
+.kakaoL{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 183px;
+    height: 45px;
+    background-color: #FEE500;
+    border-radius: 5px 5px;
+    cursor: pointer;
+}
+.icon{
+    color: #000000;
+    font-weight: 300;
+}
+.klog{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 800;
+    padding-right: 25px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
