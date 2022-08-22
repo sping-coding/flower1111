@@ -90,9 +90,10 @@ const LoginForm = () => {
             onClick={handleLogin}
           ></input>
         </p>
-        <div>
+        <div className="LoginA">
           <hr></hr>
-          <a href="#">아이디 찾기</a>|<a href="#">비밀번호 찾기</a>|
+          <a href="#">아이디 찾기</a>&nbsp;|&nbsp;<a href="#">비밀번호 찾기</a>
+          &nbsp;|&nbsp;
           <Link to="/member">회원등록</Link>
           <hr></hr>
         </div>
@@ -103,10 +104,13 @@ const LoginForm = () => {
           </div>
           <span className="klog">카카오 로그인</span>
         </div>
-        <br></br>
         <div className="NaverL">
           <div className="N">N</div>
           <span className="nlog">네이버 로그인</span>
+        </div>
+        <div className="facebookL">
+          <div className="f">f</div>
+          <span className="flog">페이스북 로그인</span>
         </div>
       </form>
       <div></div>

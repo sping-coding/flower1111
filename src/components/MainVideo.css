@@ -1,10 +1,10 @@
-.youtube {
+.Videos {
     position: relative;
     height: 700px;
     background-color: #333;
     overflow: hidden;
   }
-  .youtube .youtube__area {
+  .Videos .Videos__area {
     width: 1920px;
     position: absolute;
     /* 16비율 */
@@ -14,7 +14,7 @@
     top: 50%;
     margin-top: calc(1920px * 9 / 16 / -2);
   }
-  .youtube .youtube__area::before {
+  .Videos .Videos__area::before {
     content: "";
     display: block;
     /* 16:9 영상 비율로 요소 크기 만들기! */
@@ -22,7 +22,7 @@
     height: 0;
     padding-top: 56.25%;
   }
-  .youtube .youtube__cover {
+  .Videos .Videos__cover {
     position: absolute;
     top: 0;
     left: 0;

@@ -4,6 +4,13 @@
     align-items: center;
     height: 100vh;
 }
+.LoginForms h1{
+    margin-bottom: 70px;
+    font-size: 47px;
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+}
+
 
 
 .ID{
@@ -32,6 +39,7 @@
     width: 200px;
     color: white;
     background-color: black;
+    border-radius: 5px;
 }
 
 
@@ -46,6 +54,7 @@
     border-radius: 5px 5px;
     /* color: white; */
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .N{
     color: white;
@@ -68,6 +77,7 @@
     background-color: #FEE500;
     border-radius: 5px 5px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .icon{
     color: #000000;
@@ -79,7 +89,30 @@
     font-weight: 800;
     padding-right: 25px;
 }
-a {
+.LoginA a {
     text-decoration: none;
     color: black;
+}
+.facebookL{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 183px;
+    height: 45px;
+    background-color: #3B5998;
+    border-radius: 5px 5px;
+    cursor: pointer;
+}
+.f{
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    font-size: large;
+}
+.flog{
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    padding-right: 15px;
 }

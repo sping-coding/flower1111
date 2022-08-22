@@ -3,8 +3,8 @@ import "./MainVideo.css";
 
 const MainVideo = () => {
   return (
-    <section class="youtube">
-      <div class="youtube__area">
+    <section class="Videos">
+      <div class="Videos__area">
         <div id="player">
           <video
             className="mainVV"
@@ -19,7 +19,7 @@ const MainVideo = () => {
           </video>
         </div>
       </div>
-      <div class="youtube__cover"></div>
+      <div class="Videos__cover"></div>
     </section>
   );
 };
