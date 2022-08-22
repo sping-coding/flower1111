@@ -1,8 +1,8 @@
 import React from "react";
-import popular1 from "../images/장미.png";
-import popular2 from "../images/연분홍.png";
-import popular3 from "../images/진핑크.png";
-import popular4 from "../images/토마토장미.png";
+import popular1 from "../images/장미.jpg";
+import popular2 from "../images/연분홍.jpg";
+import popular3 from "../images/진핑크.jpg";
+import popular4 from "../images/토마토장미.jpg";
 import { Link } from "react-router-dom";
 
 const MainPopular = () => {
@@ -15,9 +15,6 @@ const MainPopular = () => {
         <img src={popular3} />
         <img src={popular4} />
       </div>
-      <Link className="MainPopularBoxLink" to="./products">
-        쇼핑몰로 이동 <span>-&gt;</span>
-      </Link>
     </div>
   );
 };

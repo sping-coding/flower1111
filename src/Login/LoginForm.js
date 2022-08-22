@@ -1,9 +1,11 @@
 import "./LoginForm.css";
 // 로그인
-import { useRef } from "react";
+import { Component, useRef } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { IoIosText } from "react-icons/io";
+import { BsImages } from "react-icons/bs";
+import loginim from "./로그인이미지.jpg";
 
 const LoginForm = () => {
   const idRef = useRef();
@@ -54,66 +56,73 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="LoginForms" align="center">
-      <form>
-        <h1>CAERULEA</h1>
+    <div>
+      <div className="LoginForm">
+        <div className="LoginForms" align="center">
+          <form>
+            <h1>CAERULEA</h1>
+            <div>
+              <input
+                className="ID"
+                type="text"
+                name="id"
+                size="20"
+                ref={idRef}
+                placeholder="아이디"
+              ></input>
+            </div>
+            &nbsp;
+            <div>
+              <input
+                className="PW"
+                type="password"
+                name="pw"
+                size="20"
+                ref={pwRef}
+                placeholder="비밀번호"
+                // errorMsg={errors.password && "올바른 형식이 아닙니다!"}
+              ></input>
+            </div>
+            <div>
+              <br></br>
+            </div>
+            <p>
+              <input
+                className="login"
+                type="button"
+                value="로그인"
+                onClick={handleLogin}
+              ></input>
+            </p>
+            <div className="LoginA">
+              <hr></hr>
+              <a href="#">아이디 찾기</a>&nbsp;|&nbsp;
+              <a href="#">비밀번호 찾기</a>
+              &nbsp;|&nbsp;
+              <Link to="/member">회원등록</Link>
+              <hr></hr>
+            </div>
+            <br></br>
+            <div className="kakaoL">
+              <div className="icon">
+                <IoIosText size="25" />{" "}
+              </div>
+              <span className="klog">카카오 로그인</span>
+            </div>
+            <div className="NaverL">
+              <div className="N">N</div>
+              <span className="nlog">네이버 로그인</span>
+            </div>
+            <div className="facebookL">
+              <div className="f">f</div>
+              <span className="flog">페이스북 로그인</span>
+            </div>
+          </form>
+        </div>
         <div>
-          <input
-            className="ID"
-            type="text"
-            name="id"
-            size="20"
-            ref={idRef}
-            placeholder="아이디"
-          ></input>
+          <img className="loginimage" src={loginim} />
         </div>
-        &nbsp;
-        <div>
-          <input
-            className="PW"
-            type="password"
-            name="pw"
-            size="20"
-            ref={pwRef}
-            placeholder="비밀번호"
-            // errorMsg={errors.password && "올바른 형식이 아닙니다!"}
-          ></input>
-        </div>
-        <div>
-          <br></br>
-        </div>
-        <p>
-          <input
-            className="login"
-            type="button"
-            value="로그인"
-            onClick={handleLogin}
-          ></input>
-        </p>
-        <div className="LoginA">
-          <hr></hr>
-          <a href="#">아이디 찾기</a>&nbsp;|&nbsp;<a href="#">비밀번호 찾기</a>
-          &nbsp;|&nbsp;
-          <Link to="/member">회원등록</Link>
-          <hr></hr>
-        </div>
-        <br></br>
-        <div className="kakaoL">
-          <div className="icon">
-            <IoIosText size="25" />{" "}
-          </div>
-          <span className="klog">카카오 로그인</span>
-        </div>
-        <div className="NaverL">
-          <div className="N">N</div>
-          <span className="nlog">네이버 로그인</span>
-        </div>
-        <div className="facebookL">
-          <div className="f">f</div>
-          <span className="flog">페이스북 로그인</span>
-        </div>
-      </form>
-      <div></div>
+      </div>
     </div>
   );
 };

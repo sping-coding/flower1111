@@ -23,6 +23,13 @@ const Navbar = () => {
     navigate("/board");
   };
 
+  const gotoHome = () => {
+    navigate("/");
+  };
+  const gotoMypage = () => {
+    navigate("/mypage");
+  };
+
   const userid = window.sessionStorage.getItem("id");
 
   const handleLogout = () => {
@@ -38,15 +45,19 @@ const Navbar = () => {
   if (userid === null) {
     return (
       <div className="MainNavBar">
-        <div className="MainLogo">
+        <div onClick={gotoHome} className="MainLogo">
           <img src={Logo} />
         </div>
         <div className="MainMenu">
-          <button onClick={goToProduct}>쇼핑몰</button>
-          <span>I</span>
-          <button onClick={goToBoard}>커뮤니티</button>
-          <span>I</span>
-          <button>
+          <button className="MainMenuFBtn" onClick={goToProduct}>
+            쇼핑몰
+          </button>
+          {/* <span>I</span> */}
+          <button className="MainMenuSBtn" onClick={goToBoard}>
+            커뮤니티
+          </button>
+          {/* <span>I</span> */}
+          <button className="NavbarBtn">
             <Dropdown>
               <Dropdown.Toggle variant="dark">
                 <BsPerson className="navPerson" />
@@ -82,7 +93,7 @@ const Navbar = () => {
                 <Dropdown.Item>{userid} 님 환영합니다</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={handleLogout}>로그아웃</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">마이페이지</Dropdown.Item>
+                <Dropdown.Item onClick={gotoMypage}>마이페이지</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </button>

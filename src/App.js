@@ -5,6 +5,7 @@ import MemberForm from "./Login/MemberForm";
 import Board from "./page/Board";
 import HomePage from "./page/HomePage";
 import Login from "./page/Login";
+import Mypages from "./page/Mypages";
 import ProductAll from "./page/ProductAll";
 import ProductDetail from "./page/ProductDetail";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/products" element={<ProductAll />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/board" element={<Board />} />
+        <Route path="/mypage" element={<Mypages />} />
       </Routes>
     </div>
   );

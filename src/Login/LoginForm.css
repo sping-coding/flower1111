@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    border-right: 5px solid beige;
+    padding-right: 47px;
 }
 .LoginForms h1{
     margin-bottom: 70px;
@@ -37,9 +38,13 @@
 
 .login{
     width: 200px;
-    color: white;
-    background-color: black;
-    border-radius: 5px;
+    height: 47px;
+    color: black;
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,  sans-serif;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    border: none;
 }
 
 
@@ -115,4 +120,16 @@
     font-size: 14px;
     font-weight: 800;
     padding-right: 15px;
+}
+.LoginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+}
+.loginimage{
+    width: auto;
+    height: 600px;
+    margin-left: 70px;
+    border-radius: 17px;
 }
