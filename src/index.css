@@ -446,5 +446,12 @@ body {
   position: fixed;
   right: 200px;
   top :30%;
+  width: 60px;
+  height: 60px;
+}
+.goToPrevBtn{
+  position: fixed;
+  top: 50%;
+  left: 3px;
 }
 

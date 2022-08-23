@@ -2,8 +2,10 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Order from "./Order";
 import { MdShoppingCart } from "react-icons/md";
-import { HiOutlineChevronRight } from "react-icons/hi";
-import { Button } from "bootstrap";
+import {
+  FaRegArrowAltCircleRight,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
 
 function Product() {
   // 꽃 리스트 저장
@@ -249,7 +251,7 @@ function Product() {
             </div>
           </main>
           <div className="goToNextBtn" onClick={next}>
-            <HiOutlineChevronRight />
+            <FaRegArrowAltCircleRight size="70px" />
           </div>
           <Order
             orders={orders}
@@ -258,9 +260,6 @@ function Product() {
             totalPrice={totalPrice}
             removeAll={removeAll}
           />
-        </div>
-        <div>
-          <button onClick={next}>다음</button>
         </div>
       </>
     );
@@ -271,7 +270,9 @@ function Product() {
           <main>
             <div>
               <h1>2. 풀잎을 선택해주세요 </h1>
-              <button onClick={prev}>이전</button>
+              <div className="goToPrevBtn" onClick={prev}>
+                <FaRegArrowAltCircleLeft size="70" />
+              </div>
             </div>
             <div className="prototypes">
               {pulips &&

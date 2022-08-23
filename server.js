@@ -21,7 +21,7 @@ const db = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "123456",
-  database: "project",
+  database: "projectDB",
   // port번호 생략하면 기본값 3306 지정되어있음
 });
 

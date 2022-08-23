@@ -7,19 +7,19 @@
 }
 
 .regist{
-    width: 200px;
+    width: 300px;
     color: white;
     background-color: black;
+    display: center;
 }
-/* h5{
-    display: flex;
-    width: 200px;
-} */
+
 input{
     border: none;
+    
 }
 .memberID{
     border-bottom: 3px solid grey;
+    
 }
 .memberPW{
     border-bottom: 3px solid grey;
@@ -39,32 +39,19 @@ input{
 .memberMobile{
     border-bottom: 3px solid grey;
 }
-.allAgree{
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.agree{
-    flex-direction: column;
-    justify-content: flex-start;
-}
 
-.agree div{
-    display: flex;
-}
-.agreeList{
-    display: flex;
-    flex-direction: column;
-}
-.emailAgree{
-padding-left: 30px;
-}
-.smsAgree{
-    padding-left: 30px;
-}
+
 .signIn {
     text-align: left;
 }
 p {
     font-size: small;
 
+}
+
+.MemberFormsF input{
+    width: 300px;
+    padding-top: 5px;
+    /* padding-bottom: 10px; */
+    margin-bottom: 15px;
 }
