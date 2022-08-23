@@ -132,6 +132,64 @@ app.post("/board/delete", (req, res) => {
     res.send(result);
   });
 });
+app.get("/flowers", (req, res) => {
+  console.log("flower!!!");
+  const sqlQuery =
+    "SELECT num, irum, S_name, F_langauge, flowering, contents, price, image_url FROM flower_tbl order by num desc";
+  db.query(sqlQuery, (err, result) => {
+    // select문 결과를 클라이언트에게 반환
+    console.log(result);
+    res.send(result);
+  });
+});
+
+app.get("/pulips", (req, res) => {
+  console.log("pulip!!!");
+  const sqlQuery =
+    "SELECT num, irum, contents, price, image_url FROM pulip_tbl order by num desc";
+  db.query(sqlQuery, (err, result) => {
+    // select문 결과를 클라이언트에게 반환
+    console.log(result);
+    res.send(result);
+  });
+});
+
+app.get("/products", (req, res) => {
+  console.log("product!!!");
+  const sqlQuery = "SELECT num, irum, price, image_url FROM product_list";
+  db.query(sqlQuery, (err, result) => {
+    // select문 결과를 클라이언트에게 반환
+    console.log(result);
+    res.send(result);
+  });
+});
+
+app.post("/orders", (req, res) => {
+  const { orders } = req.body;
+  console.log("@@@@", orders);
+
+  orders.map((order) => {
+    console.log("num@@", order.num);
+    console.log("irum@@", order.irum);
+    console.log("price@@", order.price);
+    console.log("image_url@@", order.image_url);
+    console.log("quantity@@", order.quantity);
+
+    var num = order.num;
+    var irum = order.irum;
+    var price = order.price;
+    var image_url = order.image_url;
+    var quantity = order.quantity;
+
+    const sqlQuery = "insert into order_list values(?,?,?,?,?);";
+
+    db.query(
+      sqlQuery,
+      [num, irum, price, image_url, quantity],
+      (err, result) => {}
+    );
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`running on port ${PORT}`);
