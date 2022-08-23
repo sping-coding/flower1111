@@ -5,7 +5,7 @@ const cors = require("cors"); // 교차 출처 리소스 공유(Cross-Origin Res
 
 const app = express(); // 익스프레스 설정
 const PORT = process.env.port || 8005; // 포트번호 설정 포트번호는 0부터 16비트
-
+const iconv = require("iconv-lite");
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true })); // 객체 형식 처리
 
@@ -43,8 +43,7 @@ app.post("/member", (req, res) => {
   var nickname = req.body.nickname;
   var addr = req.body.addr;
   var tel = req.body.tel;
-  // var mobile2 = req.body.mobile2;
-  // var mobile3 = req.body.mobile3;
+
   console.log(id, pw, nickname, addr, tel);
   const sqlQuery =
     "insert into user_tbl(id, pw, nickname, addr, tel) values (?,?,?,?,?);";
@@ -54,7 +53,61 @@ app.post("/member", (req, res) => {
   });
 });
 
-app.post("/board/list", (req, res) => {
+// 라이브러리 multer= 파일업로드 path = 경로 fs = 페스
+const multer = require("multer");
+const path = require("path");
+const fs = require("fs");
+
+try {
+  fs.readdirSync("uploads");
+} catch (error) {
+  console.error("uploads 폴더가 없어 uploads 폴더를 생성합니다.");
+  fs.mkdirSync("uploads");
+}
+
+const upload = multer({
+  storage: multer.diskStorage({
+    destination(req, file, done) {
+      done(null, "uploads/");
+    },
+    filename(req, file, done) {
+      const ext = path.extname(file.originalname);
+
+      done(
+        null,
+        path.basename(
+          iconv.decode(file.originalname, "utf-8").toString(),
+          ext // 확장자 제외한 이름
+        ) +
+          Date.now() +
+          ext
+      ); // 날짜 포함해서 새로운 이름 생성
+    },
+  }),
+  limits: { fileSize: 10 * 1024 * 1024 },
+});
+
+// 이미지가 저장된 경로를 static으로 지정하면 불러올 수 있다.
+app.use("/uploads", express.static("uploads")); // 정적으로 처리 해서 외부에서 접근가능 // 경로
+
+app.post("/insert", upload.single("image"), (req, res) => {
+  console.log("/insert", req.file, req.body);
+  var writer = req.body.writer;
+  var title = req.body.title;
+  var contents = req.body.contents;
+
+  const sqlQuery =
+    "INSERT INTO BOARD_TBL (WRITER, TITLE, CONTENTS, BOARD_IMAGE) values (?,?,?,?);";
+  db.query(
+    sqlQuery,
+    [writer, title, contents, req.file.filename],
+    (err, result) => {
+      res.send(result);
+    }
+  );
+});
+
+app.post("/list", (req, res) => {
   console.log("list!!!");
   var page_num = parseInt(req.body.page_num);
   var page_size = parseInt(req.body.page_size);
@@ -65,7 +118,8 @@ app.post("/board/list", (req, res) => {
   console.log("list!!!(start_limit, end_limit)", start_limit, ", ", page_size);
 
   const sqlQuery =
-    "SELECT BOARD_NUM, TITLE, CONTENTS, WRITER, DATE_FORMAT(TIME, '%Y-%m-%d') AS TIME FROM BOARD_TBL order by num desc limit ?,?;";
+    "SELECT BOARD_NUM, TITLE, CONTENTS, WRITER, DATE_FORMAT(TIME, '%Y-%m-%d') AS TIME FROM BOARD_TBL order by BOARD_NUM desc limit ?,?;";
+  // "SELECT BOARD_NUM, TITLE, CONTENTS, WRITER FROM BOARD_TBL;";
   db.query(sqlQuery, [start_limit, page_size], (err, result) => {
     // select문 결과를 클라이언트에게 반환
     res.send(result);
@@ -80,58 +134,42 @@ app.get("/board/count", (req, res) => {
   });
 });
 
-app.post("/board/insert", (req, res) => {
-  console.log("/insert", req.body);
-  var writer = req.body.writer;
-  var title = req.body.title;
-  var contents = req.body.contents;
-
-  const sqlQuery =
-    "INSERT INTO BOARD_TBL (WRITER, TITLE, CONTENTS) values(?,?,?);";
-  // ? : 파라미터로 전달받겠다
-  // [writer, title, content]
-  db.query(sqlQuery, [writer, title, contents], (err, result) => {
-    // insert는 반환 x
-    // null값 반환
-    res.send(result);
-  });
-});
-
-app.post("/board/detail", (req, res) => {
+app.post("/detail", (req, res) => {
   console.log("/detail", req.body);
   var num = parseInt(req.body.num);
 
   const sqlQuery =
-    "SELECT NUM, WRITER, TITLE,CONTENTS, DATE_FORMAT(TIME,'%Y-%m-%d') AS TIME FROM BOARD_TBL where NUM = ?;";
+    "SELECT BOARD_NUM, WRITER, TITLE,CONTENTS,board_image, DATE_FORMAT(TIME,'%Y-%m-%d') AS TIME FROM BOARD_TBL where BOARD_NUM = ?;";
   db.query(sqlQuery, [num], (err, result) => {
     res.send(result);
   });
 });
 
-app.post("/board/update", (req, res) => {
+app.post("/update", (req, res) => {
   console.log("/update", req.body);
-  var title = req.body.article.board_title;
-  var contents = req.body.article.board_contents;
-  var num = req.body.article.board_num;
+  var title = req.body.article.title;
+  var contents = req.body.article.contents;
+  var num = req.body.article.num;
 
   const sqlQuery =
-    "update BOARD_TBL set TITLE=?, CONTENTS=?,TIME=now() where num=?;";
+    "update BOARD_TBL set TITLE=?, CONTENTS=?,TIME=now() where BOARD_NUM=?;";
   db.query(sqlQuery, [title, contents, num], (err, result) => {
     res.send(result);
     console.log("result=", result);
   });
 });
 
-app.post("/board/delete", (req, res) => {
+app.post("/delete", (req, res) => {
   const num = req.body.num;
   console.log("/delete(id) => ", num);
 
-  const sqlQuery = "DELETE FROM BOARD_TBL WHERE NUM = ?;";
+  const sqlQuery = "DELETE FROM BOARD_TBL WHERE BOARD_NUM = ?;";
   db.query(sqlQuery, [num], (err, result) => {
     console.log(err);
     res.send(result);
   });
 });
+
 app.get("/flowers", (req, res) => {
   console.log("flower!!!");
   const sqlQuery =

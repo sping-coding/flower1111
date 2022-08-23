@@ -23,15 +23,15 @@ function Order({ orders, products, remove, removeAll, totalPrice }) {
     return (
       <aside>
         <div className="empty">
-          <div className="title">You don't have any orders</div>
-          <div className="subtitle">Click on a + to add an order</div>
+          <div className="title">Caerulea's Shopping Mall Cart</div>
+          <div className="subtitle">No Items</div>
         </div>
       </aside>
     );
   }
   return (
     <aside>
-      <div className="order">
+      <div className="Nempty">
         <div className="body">
           {orders.map((order) => {
             const { num } = order;
@@ -65,7 +65,7 @@ function Order({ orders, products, remove, removeAll, totalPrice }) {
                 order.quantity = 3;
               });
               return (
-                <>
+                <div>
                   <div className="item" key={num}>
                     <div className="img">
                       <img src={product.image_url} />
@@ -85,7 +85,7 @@ function Order({ orders, products, remove, removeAll, totalPrice }) {
                   <div className="limit">
                     한 상품 당 3개만 구입할 수 있습니다.
                   </div>
-                </>
+                </div>
               );
             }
           })}

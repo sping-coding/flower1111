@@ -1,0 +1,22 @@
+.modal2 {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.WriterModel {
+  position: fixed;
+  top: 100px;
+}
+
+.detailModel {
+  margin-top: 90px;
+}
+
+.updateModel {
+  margin-top: 90px;
+}

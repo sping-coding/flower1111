@@ -26,14 +26,14 @@ const Footer = () => {
         </ul>
 
         <div class="btn-group">
-          <a href="javascript:void(0)" class="btn btn--white">
-            찾아오시는 길
+          <a href="javascript:void(0)" className="footerA">
+            찾아오시는길
           </a>
-          <a href="javascript:void(0)" class="btn btn--white">
+          <a href="javascript:void(0)" className="footerA">
             고객문의
           </a>
-          <a href="javascript:void(0)" class="btn btn--white">
-            사이트 맵
+          <a href="javascript:void(0)" className="footerA">
+            사이트맵
           </a>
         </div>
 

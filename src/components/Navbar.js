@@ -75,14 +75,12 @@ const Navbar = () => {
   } else if (userid !== null) {
     return (
       <div className="MainNavBar">
-        <div className="MainLogo">
+        <div className="MainLogo" onClick={gotoHome}>
           <img src={Logo} />
         </div>
         <div className="MainMenu">
           <button onClick={goToProduct}>쇼핑몰</button>
-          <span>I</span>
           <button onClick={goToBoard}>커뮤니티</button>
-          <span>I</span>
           <button>
             <Dropdown>
               <Dropdown.Toggle variant="dark">

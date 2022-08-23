@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Order from "./Order";
+import { MdShoppingCart } from "react-icons/md";
+import { HiOutlineChevronRight } from "react-icons/hi";
+import { Button } from "bootstrap";
 
 function Product() {
   // 꽃 리스트 저장
@@ -207,101 +210,114 @@ function Product() {
 
   if (actionMode.mode === 0) {
     return (
-      <div className="container">
-        <main>
-          <h1>1. 꽃을 선택해주세요 </h1>
-          <div className="prototypes">
-            {flowers &&
-              flowers.map((flower) => {
-                const click = () => {
-                  addToOrder(flower);
-                };
-                return (
-                  <div className="prototype" key={flower.num}>
-                    <div style={{ padding: "25px 0 33px 0" }}>
-                      <img
-                        className="prototype_artwork prototype__edit"
-                        src={flower.image_url}
-                        style={{ objectFit: "contain" }}
-                      />
-                    </div>
-                    <div className="prototype__body">
-                      <div className="prototype__title">
-                        <div
-                          className="btn btn--primary float--right"
-                          onClick={click}
-                        >
-                          <i className="icon icon--plus" />
-                        </div>
-                        {flower.irum}
+      <>
+        <div className="container">
+          <main>
+            <div className="shoppingFront">
+              <h1>1. 꽃을 선택해주세요 </h1>
+            </div>
+            <div className="prototypes">
+              {flowers &&
+                flowers.map((flower) => {
+                  const click = () => {
+                    addToOrder(flower);
+                  };
+                  return (
+                    <div className="prototype" key={flower.num}>
+                      <div style={{ padding: "25px 0 33px 0" }}>
+                        <img
+                          className="prototype_artwork prototype__edit"
+                          src={flower.image_url}
+                          style={{ objectFit: "contain" }}
+                        />
                       </div>
-                      <p className="prototype__price">{flower.price}원</p>
+                      <div className="prototype__body">
+                        <div className="prototype__title">
+                          <div
+                            className="btn btn--primary float--right addIcon"
+                            onClick={click}
+                          >
+                            <MdShoppingCart />
+                          </div>
+                          {flower.irum}
+                        </div>
+                        <p className="prototype__price">{flower.price}원</p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+            </div>
+          </main>
+          <div className="goToNextBtn" onClick={next}>
+            <HiOutlineChevronRight />
           </div>
-        </main>
-        <div className="prototype__change">
+          <Order
+            orders={orders}
+            products={products}
+            remove={remove}
+            totalPrice={totalPrice}
+            removeAll={removeAll}
+          />
+        </div>
+        <div>
           <button onClick={next}>다음</button>
         </div>
-        <Order
-          orders={orders}
-          products={products}
-          remove={remove}
-          totalPrice={totalPrice}
-          removeAll={removeAll}
-        />
-      </div>
+      </>
     );
   } else if (actionMode.mode === 1) {
     return (
-      <div className="container">
-        <main>
-          <h1>2. 풀잎을 선택해주세요 </h1>
-          <div className="prototypes">
-            {pulips &&
-              pulips.map((pulip) => {
-                const click = () => {
-                  addToOrder_pulip(pulip);
-                };
-                return (
-                  <div className="prototype" key={pulip.num}>
-                    <div style={{ padding: "25px 0 33px 0" }}>
-                      <img
-                        className="prototype_artwork prototype__edit"
-                        src={pulip.image_url}
-                        style={{ objectFit: "contain" }}
-                      />
-                    </div>
-                    <div className="prototype__body">
-                      <div className="prototype__title">
-                        <div
-                          className="btn btn--primary float--right"
-                          onClick={click}
-                        >
-                          <i className="icon icon--plus" />
-                        </div>
-                        {pulip.irum}
+      <>
+        <div className="container">
+          <main>
+            <div>
+              <h1>2. 풀잎을 선택해주세요 </h1>
+              <button onClick={prev}>이전</button>
+            </div>
+            <div className="prototypes">
+              {pulips &&
+                pulips.map((pulip) => {
+                  const click = () => {
+                    addToOrder_pulip(pulip);
+                  };
+                  return (
+                    <div className="prototype" key={pulip.num}>
+                      <div style={{ padding: "25px 0 33px 0" }}>
+                        <img
+                          className="prototype_artwork prototype__edit"
+                          src={pulip.image_url}
+                          style={{ objectFit: "contain" }}
+                        />
                       </div>
-                      <p className="prototype__price">{pulip.price}원</p>
+                      <div className="prototype__body">
+                        <div className="prototype__title">
+                          <div
+                            className="btn btn--primary float--right"
+                            onClick={click}
+                          >
+                            <MdShoppingCart />
+                          </div>
+                          {pulip.irum}
+                        </div>
+                        <p className="prototype__price">{pulip.price}원</p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-          </div>
-        </main>
-        <div className="prototype__change">
+                  );
+                })}
+            </div>
+          </main>
+          <div className="prototype__change"></div>
+          <Order
+            orders={orders}
+            products={products}
+            remove={remove}
+            totalPrice={totalPrice}
+            removeAll={removeAll}
+          />
+        </div>
+        <div>
           <button onClick={prev}>이전</button>
         </div>
-        <Order
-          orders={orders}
-          products={products}
-          remove={remove}
-          totalPrice={totalPrice}
-          removeAll={removeAll}
-        />
-      </div>
+      </>
     );
   }
 }

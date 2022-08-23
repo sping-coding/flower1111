@@ -215,8 +215,8 @@
 /* 메인 화면 전환 페이지 */
 .swiper {
   margin-top: 50px;
-  width: 80%;
-  height: 600px;
+  width: 90%;
+  height: 850px;
   margin-bottom: 0px;
 }
 
@@ -240,7 +240,7 @@
 
 .swiper-slide img {
   display: block;
-  width: 70%;
+  width: 90%;
   height: auto;
   object-fit: 100%;
 }
@@ -399,7 +399,14 @@ footer .copyright {
 footer .logo {
   margin: 30px auto 0;
 }
+.footerA{
+  margin-right: 9px;
+  color: white;
+  text-decoration: none;
+}
 
 
-/* 로그인 폼 */
 
+.BBBBBB{
+  margin-top: 100px;
+}

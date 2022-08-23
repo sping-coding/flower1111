@@ -1,0 +1,70 @@
+.MemberForms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.regist{
+    width: 200px;
+    color: white;
+    background-color: black;
+}
+/* h5{
+    display: flex;
+    width: 200px;
+} */
+input{
+    border: none;
+}
+.memberID{
+    border-bottom: 3px solid grey;
+}
+.memberPW{
+    border-bottom: 3px solid grey;
+}
+.memberPWCH{
+    border-bottom: 3px solid grey;
+}
+.memberPWCH:focus{
+    border-bottom: 3px solid grey;
+}
+.memberNickName{
+    border-bottom: 3px solid grey;
+}
+.memberAddr{
+    border-bottom: 3px solid grey;
+}
+.memberMobile{
+    border-bottom: 3px solid grey;
+}
+.allAgree{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.agree{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.agree div{
+    display: flex;
+}
+.agreeList{
+    display: flex;
+    flex-direction: column;
+}
+.emailAgree{
+padding-left: 30px;
+}
+.smsAgree{
+    padding-left: 30px;
+}
+.signIn {
+    text-align: left;
+}
+p {
+    font-size: small;
+
+}
