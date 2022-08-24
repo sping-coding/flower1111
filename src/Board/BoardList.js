@@ -7,6 +7,7 @@ import Modal from "./Modal";
 // 게시판 화면 리스트
 const BoardList = ({
   boardlist,
+  getList,
   actionmode,
   handlelist,
   handledetail,
@@ -55,7 +56,11 @@ const BoardList = ({
         <div>
           <button onClick={openModal}>글쓰기</button>
           {modal === true ? (
-            <Modal modal={modal} openModal={openModal} />
+            <Modal
+              handlelist={handlelist}
+              modal={modal}
+              openModal={openModal}
+            />
           ) : null}
         </div>
       </div>
@@ -102,7 +107,11 @@ const BoardList = ({
           <div>
             <button onClick={openModal}>글쓰기</button>
             {modal === true ? (
-              <Modal modal={modal} openModal={openModal} />
+              <Modal
+                handlelist={handlelist}
+                modal={modal}
+                openModal={openModal}
+              />
             ) : null}
           </div>
         </table>

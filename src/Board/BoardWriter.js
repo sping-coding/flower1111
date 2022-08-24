@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const BoardWriter = ({ handlelist, modal, openModal }) => {
   const titleRef = useRef();
@@ -14,18 +13,16 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
     setImage_name(e.target.files[0]);
   }
 
-  const navigate = useNavigate();
+  //   handlelist();
 
   const handleInsert = (e) => {
     openModal(modal);
-    e.preventDefault();
+    // e.preventDefault();
     console.log("Insert =", titleRef.current.value);
     const config = {
       headers: { "Content-Type": "multipart/form-data" },
     };
-    // const formData = new FormData();
-    // formData.append("image", imageRef.current.value);
-    // alert(formData);
+
     axios
       .post(
         "http://localhost:8005/insert",
@@ -39,7 +36,6 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
       )
       .then((res) => {
         console.log("handleInsert =", res);
-        handlelist();
         titleRef.current.value = "";
         contentsRef.current.value = "";
         writerRef.current.value = "";
@@ -47,6 +43,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
       .catch((e) => {
         console.error(e);
       });
+    handlelist();
   };
 
   return (

@@ -1,7 +1,7 @@
 import BoardWriter from "./BoardWriter";
 import "./Modal.css";
 
-function Modal({ modal, openModal }) {
+function Modal({ modal, openModal, handlelist }) {
   // let [mobal, setMobal] = useState(props.modal);
 
   // const openMobal = () => {
@@ -18,7 +18,11 @@ function Modal({ modal, openModal }) {
         >
           x
         </button>
-        <BoardWriter modal={modal} openModal={openModal}></BoardWriter>
+        <BoardWriter
+          handlelist={handlelist}
+          modal={modal}
+          openModal={openModal}
+        ></BoardWriter>
       </div>
     </>
   );

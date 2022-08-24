@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   height: 700px;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 /* .MainHeader1{
   width: 20%;
@@ -44,29 +44,28 @@
 /* 두번째 해더 */
 .MainSecondHeaderItems{
   background-color: whitesmoke;
-  height: 700px;
+  height: 900px;
 }
 .MainSecondHeaderItems span{
   text-align: center;
-  margin-top: 5px;
-  font-weight: 700;
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 23px;
 }
 .MainSecondHeaderItems h1{
   margin-top: 1px;
-  padding-top: 40px;
+  padding-top: 80px;
   text-align: center;
-  font-size: 50px;
-  text-decoration: underline;
-  text-underline-position: under;
+  font-size: 90px;
 }
 .MainSecondHeaderItemsPics{
-  margin-top: 110px;
+  margin-top: 160px;
   display: flex;
   justify-content: space-around;
 }
 .MainSecondHeaderItemsPics img{
-  width: 260px;
-  height: 340px;
+  width: 300px;
+  height: 400px;
 }
 .MainSecondHeaderItemsFlower,
 .MainSecondHeaderItemsGrass,
@@ -75,8 +74,8 @@
   flex-direction: column;
 }
 .MainSecondHeaderItemsFlower img{
-  border-top-left-radius: 130px;
-  border-top-right-radius: 130px;
+  border-top-left-radius: 160px;
+  border-top-right-radius: 160px;
   border: 5px solid blanchedalmond;
 }
 .MainSecondHeaderItemsGrass img{
@@ -146,7 +145,7 @@
 }
 .MainPopularBox{
   background-color: #E6cdba;
-  height: 500px;
+  height: 700px;
 }
 
 /* 인기상품 컴포넌트 */
@@ -154,12 +153,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 500px;
 }
 .MainPopularBox h2{
   margin-top: 0px;
   text-align: center;
-  font-style: italic;
-  font-size: 47px;
+  font-size: 60px;
 }
 .MainPopularBoxPics{
   padding-top: 7px;
@@ -167,7 +166,7 @@
   justify-content: space-around;
 }
 .MainPopularBoxPics img{
-  width: 200px;
+  width: 300px;
   height: 250px;
   border: 3px solid sandybrown;
 }

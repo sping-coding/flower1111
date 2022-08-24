@@ -5,7 +5,7 @@
     align-items: center;
     background-color: #cfcaca;
     border-bottom: 1px solid #c8c8c8;
-    height: 60px;
+    height: 100px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -17,7 +17,8 @@
     cursor: pointer;
 }
 .MainLogo img{
-    width: 200px;
+    width: 270px;
+    height: 70px;
 }
 .MainMenu{
     padding-right: 30px;
@@ -26,9 +27,9 @@
 .MainMenu button{
     border: none;
     background-color: #cfcaca;
-    font-size: 15px;
+    font-size: 25px;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 /* .MainMenu button:hover{
     color: ghostwhite;
@@ -45,7 +46,7 @@
 
 .navPerson{
     width: 30px;
-    height: 20px;
+    padding-bottom: 3px;
 }
 
 .MainMenuFBtn{

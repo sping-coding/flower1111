@@ -444,14 +444,13 @@ body {
 
 .goToNextBtn{
   position: fixed;
-  right: 200px;
-  top :30%;
-  width: 60px;
-  height: 60px;
+  right: 450px;
+  top: 56%;
+  
 }
 .goToPrevBtn{
   position: fixed;
-  top: 50%;
+  top: 56%;
   left: 3px;
 }
 

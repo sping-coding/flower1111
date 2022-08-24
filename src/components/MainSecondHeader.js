@@ -6,7 +6,7 @@ import 두번째포장지 from "../images/두번째포장지2.jpg";
 const MainSecondHeader = () => {
   return (
     <div className="MainSecondHeaderItems">
-      <h1>About 크룰리아</h1>
+      <h1>ABOUT CAERULEA</h1>
       <div className="MainSecondHeaderItemsPics">
         <div className="MainSecondHeaderItemsFlower">
           <img src={두번째꽃} />
@@ -14,11 +14,11 @@ const MainSecondHeader = () => {
         </div>
         <div className="MainSecondHeaderItemsGrass">
           <img src={두번째풀} />
-          <span>꽃의 가치를 올려줄 다양한 그린소재</span>
+          <span>꽃의 가치를 올려줄 그린소재</span>
         </div>
         <div className="MainSecondHeaderItemsPackage">
           <img src={두번째포장지} />
-          <span>크룰리아의 명품 포장</span>
+          <span>크룰리아의 포장</span>
         </div>
       </div>
     </div>

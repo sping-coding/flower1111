@@ -60,7 +60,7 @@ const Navbar = () => {
           <button className="NavbarBtn">
             <Dropdown>
               <Dropdown.Toggle variant="dark">
-                <BsPerson className="navPerson" />
+                <BsPerson className="navPerson" size="27px" />
               </Dropdown.Toggle>
 
               <Dropdown.Menu>

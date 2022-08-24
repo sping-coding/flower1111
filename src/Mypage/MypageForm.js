@@ -2,6 +2,7 @@ import React from "react";
 import "./MypageForm.css";
 
 const MypageForm = () => {
+  const userid = window.sessionStorage.getItem("addr");
   return (
     <div className="MyPages">
       <div className="MyPagesWel">
@@ -10,7 +11,7 @@ const MypageForm = () => {
       </div>
       <div>
         <div>
-          <p>주소 |</p>
+          <p>주소 |{userid}</p>
           <p>주소입력값</p>
         </div>
         <div>
