@@ -1,16 +1,18 @@
 import "./MemberForm.css";
 //회원가입
-import React, { useEffect, useState, useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function MemberForm() {
-  const idRef = useRef();
-  const pwRef = useRef();
-  const pwchRef = useRef();
-  const nickRef = useRef();
-  const addrRef = useRef();
-  const mobileRef = useRef();
+const MemberForm = () => {
+  const idRef = useRef(); //아이디
+  const pwRef = useRef(); //비밀번호
+  const pwchRef = useRef(); //비밀번호 확인
+  const nickRef = useRef(); //닉네임
+  const addrRef = useRef(); //주소
+  const telRef = useRef(); //휴대폰 -> 앞3자리
+  // const mobile2Ref = useRef(); //휴대폰 -> 중간4자리
+  // const mobile3Ref = useRef(); //휴대폰 -> 끝4자리
 
   const navigate = useNavigate();
 
@@ -24,37 +26,43 @@ function MemberForm() {
       pwRef.current.focus();
       return false;
     }
-    if (pwchRef.current.value !== "" || pwRef.current.value) {
+    if (pwchRef.current.value !== pwRef.current.value) {
       alert("비밀번호가 일치하지 않습니다!!!");
       pwchRef.current.focus();
       return false;
     }
-    if (nickRef.current.value === "" || nickRef.current.value) {
+    if (nickRef.current.value === "" || nickRef.current.value === undefined) {
       alert("닉네임을 입력하세요!!!");
       nickRef.current.focus();
       return false;
     }
-    if (addrRef.current.value === "" || addrRef.current.value) {
+    if (addrRef.current.value === "" || addrRef.current.value === undefined) {
       alert("주소를 입력하세요!!!");
       addrRef.current.focus();
       return false;
     }
-    if (
-      mobileRef.current.value === "" ||
-      mobileRef.current.value === undefined
-    ) {
+    if (telRef.current.value === "" || telRef.current.value === undefined) {
       alert("휴대폰번호를 입력하세요!!!");
-      mobileRef.current.focus();
+      telRef.current.focus();
       return false;
     }
 
-    axios
+    // alert(idRef.current.value);
+    // alert(pwRef.current.value);
+    // alert(nickRef.current.value);
+    // alert(addrRef.current.value);
+    // alert(mobile1Ref.current.value);
+    // alert(mobile2Ref.current.value);
+    // alert(mobile3Ref.current.value);
+    axios // 호출
       .post("http://localhost:8005/member", {
-        id: idRef.current.value,
-        pw: pwRef.current.value,
-        nickname: nickRef.current.value,
-        addr: addrRef.current.calue,
-        mobile: mobileRef.current.value,
+        id: idRef.current.value, //아이디
+        pw: pwRef.current.value, //비밀번호
+        nickname: nickRef.current.value, //닉네임
+        addr: addrRef.current.value, //주소
+        tel: telRef.current.value, //휴대폰 ->앞3자리
+        // mobile2: mobile2Ref.current.value, //휴대폰 ->중간4자리
+        // mobile3: mobile3Ref.current.value, //휴대폰 ->끝4자리
       })
       .then((res) => {
         console.log("handleMember =>", res);
@@ -62,11 +70,14 @@ function MemberForm() {
         else alert("회원가입 실패!!!");
         navigate("/");
       })
+      .then((res) => {
+        console.log("handleMember => ", res);
+        navigate("/");
+      })
       .catch((e) => {
         console.error(e);
       });
   };
-
   const [allCheck, setAllCheck] = useState(false);
   const [useCheck, setUseCheck] = useState(false);
   const [personalCheck, setPersonalCheck] = useState(false);
@@ -88,7 +99,6 @@ function MemberForm() {
       setMarketingCheck(false);
     }
   };
-
   const useBtnEvent = () => {
     if (useCheck === false) {
       setUseCheck(true);
@@ -135,26 +145,24 @@ function MemberForm() {
   }, [useCheck, personalCheck, ageCheck, marketingCheck]);
 
   return (
-    <div className="MemberForms">
+    <div className="MForms">
       <div>
         <form>
           <h1>CAERULEA</h1>
+
+          <h3>ID</h3>
           <div>
-            <h5>ID</h5>
+            <input
+              type="text"
+              name="id"
+              ref={idRef}
+              placeholder="아이디를 입력하세요"
+              defaultValue=""
+            />
+
+            <h3>PW</h3>
             <div>
               <input
-                className="memberID"
-                type="text"
-                name="id"
-                ref={idRef}
-                placeholder="아이디를 입력하세요"
-                defaultValue=""
-              />
-            </div>
-            <h5>PW</h5>
-            <div>
-              <input
-                className="memberPW"
                 type="password"
                 name="pw"
                 ref={pwRef}
@@ -162,10 +170,10 @@ function MemberForm() {
                 defaultValue=""
               />
             </div>
-            <h5>PWcheck</h5>
+
+            <h3>PWcheck</h3>
             <div>
               <input
-                className="memberPWCH"
                 type="password"
                 name="pwch"
                 ref={pwchRef}
@@ -173,10 +181,10 @@ function MemberForm() {
                 placeholder="비밀번호를 확인해주세요"
               />
             </div>
-            <h5>NickName</h5>
+
+            <h3>NickName</h3>
             <div>
               <input
-                className="memberNickName"
                 type="text"
                 name="nickname"
                 ref={nickRef}
@@ -184,10 +192,10 @@ function MemberForm() {
                 defaultValue=""
               />
             </div>
-            <h5>Addr</h5>
+
+            <h3>Addr</h3>
             <div>
               <input
-                className="memberAddr"
                 type="text"
                 name="addr"
                 ref={addrRef}
@@ -195,28 +203,44 @@ function MemberForm() {
                 defaultValue=""
               />
             </div>
-            <h5>Mobile</h5>
+
+            <h3>Mobile</h3>
             <div>
               <input
-                className="memberMobile"
                 type="tel"
-                name="mobile1"
-                ref={mobileRef}
-                placeholder="하이픈 '-' 생략"
-                width="200px"
+                name="tel"
+                ref={telRef}
+                placeholder="11자리"
                 maxLength="11"
               />
             </div>
+            {/* -
+            <input
+              type="tel"
+              name="mobile2"
+              ref={mobile2Ref}
+              placeholder="4자리"
+              size="4"
+              maxLength="4"
+            />
+            -
+            <input
+              type="tel"
+              name="mobile3"
+              ref={mobile3Ref}
+              placeholder="4자리"
+              size="4"
+              maxLength="4"
+            /> */}
+          </div>
+          <div>
             <br></br>
-            <div>
-              <button className="regist" onClick={handleMember}>
-                registration
-              </button>
-            </div>
+          </div>
+          <div>
+            <input type="button" value="registration" onClick={handleMember} />
           </div>
         </form>
       </div>
-
       <form method="post" action="" className="agreement_Form">
         <div className="agreement_box">
           <hr />
@@ -267,7 +291,7 @@ function MemberForm() {
               onChange={ageBtnEvent}
             />
             <label for="check3">
-              <span>(필수)</span>만 14세 이상입니다.
+              <spans>(필수)</spans>만 14세 이상입니다.
             </label>
           </div>
           <div className="agreement_item">
@@ -293,6 +317,6 @@ function MemberForm() {
       </form>
     </div>
   );
-}
+};
 
 export default MemberForm;

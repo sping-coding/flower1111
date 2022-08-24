@@ -173,7 +173,7 @@ app.post("/delete", (req, res) => {
 app.get("/flowers", (req, res) => {
   console.log("flower!!!");
   const sqlQuery =
-    "SELECT num, irum, S_name, F_langauge, flowering, contents, price, image_url FROM flower_tbl order by num desc";
+    "SELECT num, irum, S_name, F_langauge, flowering, contents, price, image_url FROM flower_tbl order by num asc";
   db.query(sqlQuery, (err, result) => {
     // select문 결과를 클라이언트에게 반환
     console.log(result);

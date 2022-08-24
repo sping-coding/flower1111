@@ -1,57 +1,11 @@
-.MemberForms{
+.MForms{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-top: 70px;
 }
 
-.regist{
-    width: 300px;
-    color: white;
-    background-color: black;
-    display: center;
-}
-
-input{
-    border: none;
-    
-}
-.memberID{
-    border-bottom: 3px solid grey;
-    
-}
-.memberPW{
-    border-bottom: 3px solid grey;
-}
-.memberPWCH{
-    border-bottom: 3px solid grey;
-}
-.memberPWCH:focus{
-    border-bottom: 3px solid grey;
-}
-.memberNickName{
-    border-bottom: 3px solid grey;
-}
-.memberAddr{
-    border-bottom: 3px solid grey;
-}
-.memberMobile{
-    border-bottom: 3px solid grey;
-}
-
-
-.signIn {
-    text-align: left;
-}
-p {
-    font-size: small;
-
-}
-
-.MemberFormsF input{
-    width: 300px;
-    padding-top: 5px;
-    /* padding-bottom: 10px; */
-    margin-bottom: 15px;
+.FirstI{
+    display: flex;
 }
