@@ -29,10 +29,12 @@ app.post("/login", (req, res) => {
   console.log("/login", req.body);
   var id = req.body.id;
   var pw = req.body.pw;
-
+  var nickname = req.body.nickname;
+  var addr = req.body.addr;
+  var tel = req.body.tel;
   const sqlQuery =
-    "select count(*) as 'cnt' from user_tbl where id=? and pw=?;"; //count의 별칭 = 'cnt'
-  db.query(sqlQuery, [id, pw], (err, result) => {
+    "select nickname, tel, addr, count(*) as 'cnt' from user_tbl where id=? and pw=?;"; //count의 별칭 = 'cnt'
+  db.query(sqlQuery, [id, pw, nickname, addr, tel], (err, result) => {
     res.send(result); //
   });
 });

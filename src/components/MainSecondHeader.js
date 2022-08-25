@@ -1,7 +1,7 @@
 import React from "react";
 import 두번째꽃 from "../images/두번째꽃.png";
 import 두번째풀 from "../images/두번째풀.jpg";
-import 두번째포장지 from "../images/두번째포장지2.jpg";
+import 두번째포장지 from "../images/두번째포장지3.webp";
 
 const MainSecondHeader = () => {
   return (

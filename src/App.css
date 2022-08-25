@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   height: 700px;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 /* .MainHeader1{
   width: 20%;
@@ -153,12 +153,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 500px;
+  height: 600px;
 }
 .MainPopularBox h2{
   margin-top: 0px;
   text-align: center;
   font-size: 60px;
+  font-weight: 800;
 }
 .MainPopularBoxPics{
   padding-top: 7px;
@@ -215,7 +216,7 @@
 .swiper {
   margin-top: 50px;
   width: 90%;
-  height: 850px;
+  height: 700px;
   margin-bottom: 0px;
 }
 
@@ -240,22 +241,57 @@
 .swiper-slide img {
   display: block;
   width: 90%;
-  height: auto;
   object-fit: 100%;
+  height: 700px;
+}
+.FirstFF{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.FirstFFH{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.FirstFFH img{
+  height: 300px;
+  width: auto;
+  padding-bottom: 30px;
+  border: 2px solid black;
+}
+.FirstFFH span{
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.FirstFFT{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.FirstFFT{
+  font-size: 37px;
+  font-weight: 800;
+  border:6px solid black;
+  padding: 50px;
 }
 
 
 
 
-
-
 /* 홈페이지 change */
+.HomepageChanges{
+  background-color: #F5F5F5;
+}
 .HomepageChanges h2{
   text-align: center;
   font-size: 57px;
   font-weight: 700;
-  margin-top: 70px;
   margin-bottom: 70px;
+  padding-top: 70px;
 }
 
 .mainChange{
@@ -297,6 +333,8 @@
   border: none;
   transition: 0.5s ease-out;
   margin-bottom: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .HomepageChangeBtnF:hover{
   font-size: 37px;
@@ -315,6 +353,8 @@
   color: white;
   border: none;
   transition: 0.5s ease-out;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .HomepageChangeBtnS:hover{
   font-size: 37px;
@@ -324,13 +364,20 @@
   font-size: 37px;
   background-color: brown;
 }
-
+.mainBox{
+  display: flex;
+  justify-content: center;
+}
+.mainBoxss{
+  width: 60%;
+}
 
 /* footer */
 
 footer {
   background-color: #272727;
   border-top: 1px solid #333;
+  margin-top: 50px;
 }
 footer .inner {
   padding: 40px 0 60px 0;

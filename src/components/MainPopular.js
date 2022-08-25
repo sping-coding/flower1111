@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const MainPopular = () => {
   return (
     <div className="MainPopularBox">
-      <h2>See What's Popular</h2>
+      <h2>This Month flowers</h2>
       <div className="MainPopularBoxPics">
         <img src={popular1} />
         <img src={popular2} />

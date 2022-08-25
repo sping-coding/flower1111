@@ -236,8 +236,13 @@ const MemberForm = () => {
           <div>
             <br></br>
           </div>
-          <div>
-            <input type="button" value="registration" onClick={handleMember} />
+          <div className="MFormsBtns">
+            <input
+              className="MFormsBtn"
+              type="button"
+              value="회원등록"
+              onClick={handleMember}
+            />
           </div>
         </form>
       </div>

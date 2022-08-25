@@ -9,7 +9,6 @@ import MainSecondPicChange from "../components/MainSecondPicChange";
 import MainPopular from "../components/MainPopular";
 import MainSecondCard from "../components/MainSecondCard";
 import MainVideo from "../components/MainVideo";
-import ChatAPI from "../components/ChatAPI";
 
 const HomePage = () => {
   return (
@@ -32,7 +31,6 @@ const HomePage = () => {
       <MainPopular />
       <HomepageChange />
       <Footer />
-      <ChatAPI />
     </div>
   );
 };

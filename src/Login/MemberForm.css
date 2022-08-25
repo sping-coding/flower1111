@@ -5,7 +5,19 @@
     justify-content: center;
     margin-top: 70px;
 }
-
+.MForms h1{
+    font-size:50px;
+}
+.MFormsBtns{
+    display: flex;
+    justify-content: center;
+    padding-right: 80px;
+}
+.MFormsBtn{
+    border: none;
+    background-color: beige;
+    height: 30px;
+}
 .FirstI{
     display: flex;
 }

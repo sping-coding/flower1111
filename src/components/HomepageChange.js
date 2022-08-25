@@ -43,8 +43,10 @@ const HomepageChange = () => {
           Paper
         </button>
       </div>
-      <div className="main">
-        <HomepageChangeBox title="items" item={buttonSelect} />
+      <div className="mainBox">
+        <div className="mainBoxss">
+          <HomepageChangeBox title="items" item={buttonSelect} />
+        </div>
       </div>
     </div>
   );

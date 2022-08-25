@@ -2,21 +2,25 @@ import React from "react";
 import "./MypageForm.css";
 
 const MypageForm = () => {
-  const userid = window.sessionStorage.getItem("addr");
+  const usernick = window.sessionStorage.getItem("nick");
+  const useraddr = window.sessionStorage.getItem("addr");
+  const usertel = window.sessionStorage.getItem("tel");
+
+  console.log(usernick, useraddr, usertel);
+
   return (
     <div className="MyPages">
       <div className="MyPagesWel">
-        <h4>My PAGE</h4>
-        <h2>뭐시기 님 반갑습니다</h2>
+        <h2>{usernick} 님 반갑습니다</h2>
       </div>
       <div>
         <div>
-          <p>주소 |{userid}</p>
-          <p>주소입력값</p>
+          <p>주소 | </p>
+          <p>{useraddr}</p>
         </div>
         <div>
           <p>전화번호 |</p>
-          <p>전화번호입력값</p>
+          <p>{usertel}</p>
         </div>
       </div>
       <div>

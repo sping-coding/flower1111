@@ -39,6 +39,10 @@ const LoginForm = () => {
         console.log("handleLogin =>", res);
         if (res.data[0].cnt === 1) {
           window.sessionStorage.setItem("id", idRef.current.value);
+          window.sessionStorage.setItem("nick", res.data[0].nickname);
+          window.sessionStorage.setItem("tel", res.data[0].tel);
+          window.sessionStorage.setItem("addr", res.data[0].addr);
+          window.sessionStorage.setItem("cnt", res.data[0].cnt);
           navigate("/");
         } else {
           alert("로그인 실패");
