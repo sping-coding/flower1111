@@ -5,7 +5,11 @@ import { MdShoppingCart } from "react-icons/md";
 import {
   FaRegArrowAltCircleRight,
   FaRegArrowAltCircleLeft,
+  FaSearchPlus,
 } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
+import ProductDetail from "./ProductDetail";
 
 function Product() {
   // 꽃 리스트 저장
@@ -58,7 +62,7 @@ function Product() {
 
   const pulips = pulipList.pulipList;
 
-  // 포장지 리스트 저장
+  // 상품 리스트 저장
   const [productList, setProductList] = useState([]);
 
   // 풀 리스트
@@ -204,10 +208,18 @@ function Product() {
     });
   };
 
+  const [detail, setDetail] = useState(false);
+  const [productNum, setProductNum] = useState(0);
+
+  const openDetail = (e) => {
+    setDetail(!detail);
+    setProductNum(e.target.id);
+  };
+
   useEffect(() => {
+    productGetList();
     flowerGetList();
     pulipGetList();
-    productGetList();
   }, []);
 
   if (actionMode.mode === 0) {
@@ -220,7 +232,7 @@ function Product() {
             </div>
             <div className="prototypes">
               {flowers &&
-                flowers.map((flower) => {
+                flowers.map((flower, index) => {
                   const click = () => {
                     addToOrder(flower);
                   };
@@ -244,6 +256,20 @@ function Product() {
                           {flower.irum}
                         </div>
                         <p className="prototype__price">{flower.price}원</p>
+                      </div>
+                      <div className="prototype_detail" key={flower.num}>
+                        <button id={index} onClick={openDetail}>
+                          상세보기
+                        </button>
+                        {detail === true ? (
+                          <ProductDetail
+                            detail={detail}
+                            openDetail={openDetail}
+                            flowers={flowers}
+                            num={productNum}
+                            addToOrder={addToOrder}
+                          />
+                        ) : null}
                       </div>
                     </div>
                   );

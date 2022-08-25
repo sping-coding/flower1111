@@ -1,0 +1,46 @@
+.modal_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    z-index: 9000;
+  }
+  .productDetail {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    margin: -50px 0 0 -50px;
+    vertical-align: middle;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 9009;
+  }
+  .btn_close {
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .productDetail_body {
+    display: flex;
+  }
+  .productDetail_img {
+    width: 50%;
+    height: 50%;
+    margin-left: 20px;
+    border: 1px solid black;
+  }
+  .productDetail_content {
+    margin: 0 auto;
+    display: grid;
+  
+    justify-content: end;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+  .productDetail_title {
+    text-align: center;
+  }
