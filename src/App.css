@@ -240,44 +240,11 @@
 
 .swiper-slide img {
   display: block;
-  width: 90%;
+  width: 60%;
   object-fit: 100%;
-  height: 700px;
-}
-.FirstFF{
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-}
-.FirstFFH{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-}
-.FirstFFH img{
-  height: 300px;
-  width: auto;
-  padding-bottom: 30px;
-  border: 2px solid black;
-}
-.FirstFFH span{
-  font-weight: 800;
-  font-size: 35px;
+  height: auto;
 }
 
-.FirstFFT{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.FirstFFT{
-  font-size: 37px;
-  font-weight: 800;
-  border:6px solid black;
-  padding: 50px;
-}
 
 /* 이달의 꽃 */
 .mainpopularTs{
@@ -302,6 +269,7 @@
   justify-content: space-around;
   flex-wrap: nowrap;
   overflow: hidden;
+  cursor: pointer;
 }
 
 

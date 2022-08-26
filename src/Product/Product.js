@@ -5,6 +5,7 @@ import { MdShoppingCart } from "react-icons/md";
 import {
   FaRegArrowAltCircleRight,
   FaRegArrowAltCircleLeft,
+  FaSearchPlus,
 } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
@@ -227,7 +228,7 @@ function Product() {
         <div className="container">
           <main>
             <div className="shoppingFront">
-              <h1>1. 꽃을 선택해주세요 </h1>
+              <h2>1. 꽃을 선택해주세요 </h2>
             </div>
             <div className="prototypes">
               {flowers &&
@@ -296,7 +297,7 @@ function Product() {
         <div className="container">
           <main>
             <div>
-              <h1>2. 풀잎을 선택해주세요 </h1>
+              <h2>2. 풀잎을 선택해주세요 </h2>
               <div className="goToPrevBtn" onClick={prev}>
                 <FaRegArrowAltCircleLeft size="70" />
               </div>
@@ -317,16 +318,14 @@ function Product() {
                         />
                       </div>
                       <div className="prototype__body">
-                        <div className="prototype__title">
-                          <div
-                            className="btn btn--primary float--right"
-                            onClick={click}
-                          >
-                            <MdShoppingCart />
-                          </div>
-                          {pulip.irum}
-                        </div>
+                        <div className="prototype__title">{pulip.irum}</div>
                         <p className="prototype__price">{pulip.price}원</p>
+                      </div>
+                      <div
+                        className="btn btn--primary float--right"
+                        onClick={click}
+                      >
+                        <MdShoppingCart />
                       </div>
                     </div>
                   );

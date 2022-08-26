@@ -28,7 +28,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
         "http://localhost:8005/insert",
         {
           title: titleRef.current.value,
-          writer: writerRef.current.value,
+          writer: window.sessionStorage.getItem("nick"),
           contents: contentsRef.current.value,
           image: image_name,
         },
@@ -38,7 +38,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
         console.log("handleInsert =", res);
         titleRef.current.value = "";
         contentsRef.current.value = "";
-        writerRef.current.value = "";
+        writerRef.current.value = window.sessionStorage.getItem("nick");
       })
       .catch((e) => {
         console.error(e);
@@ -62,7 +62,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
               ></input>
             </td>
           </tr>
-          <tr>
+          {/* <tr>
             <td width="100px">글쓴이</td>
             <td align="left" width="550px">
               <input
@@ -74,7 +74,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
                 placeholder="글쓴이를 입력하세요"
               ></input>
             </td>
-          </tr>
+          </tr> */}
           <tr>
             <td>내용</td>
             <td align="left">

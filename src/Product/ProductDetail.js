@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
 import { GrClose } from "react-icons/gr";
+import { MdShoppingCart } from "react-icons/md";
 
 function ProductDetail({ detail, openDetail, flowers, num, addToOrder }) {
   const navigate = useNavigate();
@@ -55,7 +56,9 @@ function ProductDetail({ detail, openDetail, flowers, num, addToOrder }) {
               </div>
             </div>
             <div className="order">
-              <button onClick={click}>장바구니 추가</button>
+              <button onClick={click}>
+                <MdShoppingCart />
+              </button>
             </div>
           </div>
         </div>

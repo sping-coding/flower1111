@@ -49,5 +49,7 @@
   .order button{
     margin-top: 30px;
     border: none;
-    background-color: burlywood;
+    background-color: beige;
+    width: 60px;
+    height: 30px;
   }

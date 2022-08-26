@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .container{
-  margin-top: 67px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-around;
 }
@@ -29,12 +29,14 @@ body {
   flex-direction: column;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  text-align: center;
 }
 
 .prototype .prototype__body p {
   padding: 0.8rem;
   font-size: 1rem;
   line-height: 1.4;
+  padding-bottom: 1px;
 }
 
 .prototype .prototype__footer {
@@ -105,6 +107,9 @@ body {
   border: none;
   padding: 4px;
   border-radius: 5px;
+  margin-right: 10px;
+  background-color: beige;
+  font-weight: 700;
 }
 /* Button */
 
