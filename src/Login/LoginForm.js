@@ -108,7 +108,7 @@ const LoginForm = () => {
             </div>
             <br></br>
             <div className="kakaoL">
-              <div className="icon">
+              <div className="iconss">
                 <IoIosText size="25" />{" "}
               </div>
               <span className="klog">카카오 로그인</span>

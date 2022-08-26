@@ -5,7 +5,6 @@ import { MdShoppingCart } from "react-icons/md";
 import {
   FaRegArrowAltCircleRight,
   FaRegArrowAltCircleLeft,
-  FaSearchPlus,
 } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
@@ -246,21 +245,23 @@ function Product() {
                         />
                       </div>
                       <div className="prototype__body">
-                        <div className="prototype__title">
-                          <div
-                            className="btn btn--primary float--right addIcon"
-                            onClick={click}
-                          >
-                            <MdShoppingCart />
-                          </div>
-                          {flower.irum}
-                        </div>
+                        <div className="prototype__title">{flower.irum}</div>
                         <p className="prototype__price">{flower.price}원</p>
                       </div>
                       <div className="prototype_detail" key={flower.num}>
-                        <button id={index} onClick={openDetail}>
+                        <button
+                          className="prototype_detailBTN"
+                          id={index}
+                          onClick={openDetail}
+                        >
                           상세보기
                         </button>
+                        <div
+                          className="btn btn--primary float--right addIcon"
+                          onClick={click}
+                        >
+                          <MdShoppingCart />
+                        </div>
                         {detail === true ? (
                           <ProductDetail
                             detail={detail}
@@ -340,9 +341,6 @@ function Product() {
             totalPrice={totalPrice}
             removeAll={removeAll}
           />
-        </div>
-        <div>
-          <button onClick={prev}>이전</button>
         </div>
       </>
     );

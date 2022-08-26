@@ -25,3 +25,6 @@
 .MyPagesDetTel{
     display: flex;
 }
+.MyPageLook{
+    border: 1px solid black;
+}

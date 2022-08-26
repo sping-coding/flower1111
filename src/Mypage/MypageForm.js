@@ -24,7 +24,7 @@ const MypageForm = () => {
           <p>{usertel}</p>
         </div>
       </div>
-      <div>
+      <div className="MyPageLook">
         <h3>주문조회</h3>
       </div>
     </div>

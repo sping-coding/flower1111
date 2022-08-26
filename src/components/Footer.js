@@ -41,7 +41,7 @@ const Footer = () => {
           <span>사업자등록번호 201-81-21515</span>
           <span>(주)크룰리아</span>
           <span>TEL : 010) 4622-2173 / FAX : 063) 653-2173</span>
-          <span>통합 책임자 : 박 훈</span>
+          <span>총 책임자 : 박 훈</span>
         </div>
 
         <p class="copyright">

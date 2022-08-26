@@ -55,7 +55,7 @@ function ProductDetail({ detail, openDetail, flowers, num, addToOrder }) {
               </div>
             </div>
             <div className="order">
-              <button onClick={click}>장바구니</button>
+              <button onClick={click}>장바구니 추가</button>
             </div>
           </div>
         </div>

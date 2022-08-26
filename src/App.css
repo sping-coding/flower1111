@@ -279,6 +279,30 @@
   padding: 50px;
 }
 
+/* 이달의 꽃 */
+.mainpopularTs{
+  background-color: beige;
+  height: 600px;
+}
+.mainpopularT{
+  text-align: center;
+}
+
+.mainpopularT h2{
+  padding-top: 50px;
+  font-size: 40px;
+}
+.mainpopularT p{
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.mainpopulari{
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
 
 
 

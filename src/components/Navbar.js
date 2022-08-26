@@ -31,6 +31,7 @@ const Navbar = () => {
   };
 
   const userid = window.sessionStorage.getItem("id");
+  const usernick = window.sessionStorage.getItem("nick");
 
   const handleLogout = () => {
     console.log("handleLogout");
@@ -88,7 +89,7 @@ const Navbar = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item>{userid} 님 환영합니다</Dropdown.Item>
+                <Dropdown.Item>{usernick} 님 환영합니다</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={handleLogout}>로그아웃</Dropdown.Item>
                 <Dropdown.Item onClick={gotoMypage}>마이페이지</Dropdown.Item>
