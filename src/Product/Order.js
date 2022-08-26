@@ -11,9 +11,9 @@ function Order({ orders, products, remove, removeAll, totalPrice }) {
         orders,
       })
       .then((res) => {
-        // navigate("/");
         console.log(res);
         console.log("장바구니에 물품이 담겼습니다!!");
+        navigate("/payment");
       })
       .catch((e) => {
         console.error(e);

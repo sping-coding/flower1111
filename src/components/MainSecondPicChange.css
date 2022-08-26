@@ -1,0 +1,55 @@
+
+.reserve-store{
+    height: 400px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    margin: auto;
+  }
+  .inner{
+    width: 921px;
+    height: 400px;
+  }
+  
+  .reserve-store .medal {
+    width: 200px;
+    height: 300px;
+    perspective: 1200px;
+    
+  }
+  .reserve-store .medal .front,
+  .reserve-store .medal .back {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    transition: 1s;
+    backface-visibility: hidden;
+  }
+  .reserve-store .medal .front {
+    width: 921px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.295);
+    border: 3px solid rgba(0, 0, 0, 0.295);
+    transform: rotateY(0deg);
+  }
+  .reserve-store .medal:hover .front {
+    transform: rotateY(180deg);
+  }
+  .reserve-store .medal .back {
+    transform: rotateY(-180deg);
+  }
+  .reserve-store .medal:hover .back {
+    transform: rotateY(0deg);
+    background-color: rgba(0, 0, 0, 0.295);
+    border: 3px solid rgba(0, 0, 0, 0.295);
+    width: 920px;
+    height: 400px;
+    position: absolute;
+  }
+  .messagetext{
+    margin: 176px;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  

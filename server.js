@@ -229,6 +229,17 @@ app.post("/orders", (req, res) => {
       (err, result) => {}
     );
   });
+  res.send("OK");
+});
+
+app.post("/payment", (req, res) => {
+  console.log("/payment");
+  const sqlQuery = "select num, irum, price, image_url, quantity from order_list;";
+  db.query(sqlQuery, (err, result) => {
+    
+    console.log("/payment(result) =>",result);
+    res.send(result);
+  });
 });
 
 app.listen(PORT, () => {

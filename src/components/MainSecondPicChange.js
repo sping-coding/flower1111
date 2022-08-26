@@ -1,24 +1,20 @@
 import React from "react";
-import mainenv from "../images/mainenv.png";
+import "./MainSecondPicChange.css"
 
-const MainSecondPicChange = () => {
+const MainSecondPicChange = ({onChange, msgValue}) => {
   return (
     <div>
-      <section class="reserve-store">
+      <section className="reserve-store">
         <div className="MainSecondSide"></div>
-        <div class="inner">
-          <div class="medal">
-            <div class="front">
-              <img src={mainenv} />
+        <div className="inner">
+          <div className="medal">
+            <div className="front">
+              <div className="messagetext">
+                {msgValue}
+              </div>
             </div>
-            <div class="back">
-              <p>
-                각각의 꽃들이 품고있는 꽃말들을 조합해
-                <br />
-                고객님이 전하고 싶은 메시지에 초점을 맞춘
-                <br />
-                -크룰리아-
-              </p>
+            <div className="back">
+              <h2 className="messagetext">CAERULEA</h2>
             </div>
           </div>
         </div>

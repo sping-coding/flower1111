@@ -1,5 +1,6 @@
 import React from "react";
 import "./MypageForm.css";
+import PaymentList from "../Payment/PaymentList";
 
 const MypageForm = () => {
   const usernick = window.sessionStorage.getItem("nick");
@@ -26,6 +27,7 @@ const MypageForm = () => {
       </div>
       <div className="MyPageLook">
         <h3>주문조회</h3>
+        <PaymentList />
       </div>
     </div>
   );
