@@ -12,7 +12,7 @@
     justify-content: space-evenly;
 }
 .MyPagesWel p{
-    font-size: 25px;
+    font-size: 30px;
     padding: 0;
 }
 
@@ -20,20 +20,30 @@
 
 .MyPagesDet{
     width: 60%;
-    border: 1px solid black;
+    border: 1px solid burlywood;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 30px;
+    padding-top: 3px;
 }
 .MyPagesDetAddr{
     display: flex;
 }
+.MyPagesDetAddr p{
+    margin-right: 10px;
+}
 .MyPagesDetID{
     display: flex;
 }
+.MyPagesDetID p{
+    margin-right:10px;
+}
 .MyPagesDetTel{
     display: flex;
+}
+.MyPagesDetTel p{
+    margin-right: 10px;
 }
 .MyPageLook{
     border: 1px solid black;
@@ -53,3 +63,30 @@
     margin-bottom: 5px;
 }
 
+.MypageDelivers{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.MypageD{
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    text-align: center;
+}
+.MypageDBlue{
+    border: 2px solid tomato;
+}
+.MypageDDB{
+    color: tomato;
+    font-weight: 700;
+}
+.MypageDD{
+    padding-top: 5px;
+}
+.MypageArrow{
+    display: flex;
+    align-items: center;
+}

@@ -102,7 +102,7 @@ function Order({ orders, products, remove, removeAll, totalPrice }) {
             </button>
           </div>
           <button
-            className="btn btn--secondary"
+            className="CheckoutBtn"
             style={{ width: "100%", marginTop: 10 }}
             onClick={checkOut}
           >

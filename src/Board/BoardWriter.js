@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import axios from "axios";
+import { BsFillXSquareFill } from "react-icons/bs";
 
 const BoardWriter = ({ handlelist, modal, openModal }) => {
   const titleRef = useRef();
@@ -8,9 +9,12 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
   const imageRef = useRef();
 
   const [image_name, setImage_name] = useState("");
+  const usernick = window.sessionStorage.getItem("nick");
 
   function onImage(e) {
-    setImage_name(e.target.files[0]);
+    const imageUrl = URL.createObjectURL(e.target.files[0]);
+
+    setImage_name(imageUrl);
   }
 
   //   handlelist();
@@ -47,71 +51,89 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
   };
 
   return (
-    <div>
-      <form encType="multipart/form-data">
-        <table border="1" width="700px" align="center">
-          <tr>
-            <td width="100px">제목</td>
-            <td align="left" width="550px">
+    <div className="wwwww">
+      <div className="boardWriters">
+        <form encType="multipart/form-data">
+          <div className="closeModal">
+            <button
+              className="closeModalBtn"
+              onClick={() => {
+                openModal(modal);
+              }}
+            >
+              X
+            </button>
+          </div>
+          <div className="writerTitless">
+            <div className="writerTitle">
               <input
+                className="input_title"
                 type="text"
                 name="title"
                 size="68"
                 ref={titleRef}
-                placeholder="제목을 입력하세요"
+                placeholder="제목"
               ></input>
-            </td>
-          </tr>
-          {/* <tr>
-            <td width="100px">글쓴이</td>
-            <td align="left" width="550px">
+            </div>
+          </div>
+          {/* <hr /> */}
+          {/* <div className="wwriter">
+          <input
+            type="text"
+            name="writer"
+            size="68"
+            ref={writerRef}
+            value={window.sessionStorage.getItem("nickname")}
+            placeholder="글쓴이"
+          ></input>
+        </div> */}
+          <div className="writerCttImg">
+            {/* <div>
+              <h3>이미지</h3>
+            </div> */}
+            <div className="writerImg">
+              <div className="filebox">
+                <label for="ex_file">파일 선택</label>
+                <input
+                  id="ex_file"
+                  type="file"
+                  name="image"
+                  ref={imageRef}
+                  accept="image/*"
+                  onChange={onImage}
+                />
+                {/* <BsFillXSquareFill /> */}
+              </div>
+              <div>
+                {image_name && (
+                  <img
+                    alt="sample"
+                    src={image_name}
+                    width="300px"
+                    height="300px"
+                  />
+                )}
+              </div>
+            </div>
+            <div className="writerContets">
               <input
                 type="text"
-                name="writer"
-                size="68"
-                ref={writerRef}
-                value={window.sessionStorage.getItem("nickname")}
-                placeholder="글쓴이를 입력하세요"
-              ></input>
-            </td>
-          </tr> */}
-          <tr>
-            <td>내용</td>
-            <td align="left">
-              <textarea
-                rows="5"
-                cols="70"
+                className="input_contents"
                 name="content"
                 ref={contentsRef}
-                placeholder="내용을 입력하세요"
-              ></textarea>
-            </td>
-          </tr>
-          <tr>
-            <td>이미지</td>
-            <td align="left">
-              <input
-                type="file"
-                name="image"
-                ref={imageRef}
-                accept="image/*"
-                onChange={onImage}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td colSpan="2" align="center">
-              <input
-                type="button"
-                value="글쓰기"
-                onClick={handleInsert}
+                placeholder="내용"
               ></input>
-              &nbsp;
-              <input type="reset" value="취소" onClick={openModal}></input>
-            </td>
-          </tr>
-        </table>
-      </form>
+            </div>
+          </div>
+          <div className="writeUploads">
+            <button onClick={handleInsert} className="uploadsBtn">
+              글 올리기
+            </button>
+            {/* &nbsp;
+          <input type="reset" value="취소" onClick={openModal}></input> */}
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

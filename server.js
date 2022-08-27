@@ -93,20 +93,17 @@ const upload = multer({
 app.use("/uploads", express.static("uploads")); // 정적으로 처리 해서 외부에서 접근가능 // 경로
 
 app.post("/insert", upload.single("image"), (req, res) => {
-  console.log("/insert", req.file, req.body);
+  console.log("/insert", req.body);
   var writer = req.body.writer;
   var title = req.body.title;
   var contents = req.body.contents;
+  var image = req.body.image;
 
   const sqlQuery =
     "INSERT INTO BOARD_TBL (WRITER, TITLE, CONTENTS, BOARD_IMAGE) values (?,?,?,?);";
-  db.query(
-    sqlQuery,
-    [writer, title, contents, req.file.filename],
-    (err, result) => {
-      res.send(result);
-    }
-  );
+  db.query(sqlQuery, [writer, title, contents, image], (err, result) => {
+    res.send(result);
+  });
 });
 
 app.post("/list", (req, res) => {
@@ -234,10 +231,10 @@ app.post("/orders", (req, res) => {
 
 app.post("/payment", (req, res) => {
   console.log("/payment");
-  const sqlQuery = "select num, irum, price, image_url, quantity from order_list;";
+  const sqlQuery =
+    "select num, irum, price, image_url, quantity from order_list;";
   db.query(sqlQuery, (err, result) => {
-    
-    console.log("/payment(result) =>",result);
+    console.log("/payment(result) =>", result);
     res.send(result);
   });
 });

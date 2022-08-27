@@ -372,9 +372,11 @@ footer {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  padding-top: 50px;
+  height: 300px;
 }
-footer .inner {
-  padding: 40px 0 60px 0;
+footer .inner{
+  height: 100px;
 }
 footer .menu {
   display: flex;
@@ -449,4 +451,12 @@ footer .logo {
 
 .BBBBBB{
   margin-top: 100px;
+}
+.CheckoutBtn{
+  border: none;
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+  height: 37px;
+  font-weight: 700;
 }

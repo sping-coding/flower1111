@@ -5,7 +5,7 @@ const BoardArticle = ({
   handleupdateform,
 }) => {
   return (
-    <tr>
+    <tr className="ArticleTr">
       <td>{article.BOARD_NUM}</td>
       <td>
         <a href="#" id={article.BOARD_NUM} onClick={handledetail}>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./Board.css";
 
 const BoardDetail = ({
   article,
@@ -6,7 +7,7 @@ const BoardDetail = ({
   handleupdateform,
   handleupdate,
 }) => {
-  const image = "http://localhost:8005/uploads/" + article.board_image; // 경로추가
+  const image = article.board_image; // 경로추가
   console.log("image =>", image);
 
   const handleDelete = (e) => {
@@ -23,64 +24,57 @@ const BoardDetail = ({
   };
 
   return (
-    <div>
-      <form>
-        <table border="1" width="700px" align="center">
-          <tr>
-            <td width="100px">글번호</td>
-            <td align="left" width="600px">
-              {article.num}
-            </td>
-          </tr>
-          <tr>
-            <td width="100px">제목</td>
-            <td align="left" width="600px">
-              {article.title}
-            </td>
-          </tr>
-          <tr>
-            <td width="100px">날짜</td>
-            <td align="left" width="600px">
-              {article.time}
-            </td>
-          </tr>
-          <tr>
-            <td width="100px">글쓴이</td>
-            <td align="left" width="600px">
-              {article.writer}
-            </td>
-          </tr>
-          <tr>
-            <td width="100px">글내용</td>
-            <td align="left" width="600px">
-              {article.contents}
-            </td>
-          </tr>
-          <tr>
-            <td width="100px">이미지</td>
-            <td align="left" width="600px">
-              <img src={image} />
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <input type="button" value="글목록" onClick={handlelist}></input>
-              <input
-                type="button"
-                value="수정"
-                id={article.num}
-                onClick={handleupdateform}
-              ></input>
-              <input
-                type="button"
-                value="삭제"
-                id={article.num}
-                onClick={handleDelete}
-              ></input>
-            </td>
-          </tr>
-        </table>
-      </form>
+    <div className="BBDD">
+      <div className="BD">
+        <div className="BDTitle">
+          <h1>제목</h1>
+          <div className="BDBTN">
+            <button
+              className="detailDeletes"
+              id={article.num}
+              onClick={handlelist}
+            >
+              x
+            </button>
+          </div>
+          <div className="write">
+            <div className="user">{article.writer}</div>
+            <div className="time">{article.time}</div>
+          </div>
+        </div>
+
+        {/* <hr></hr> */}
+        <div className="BDcontainer">
+          <div className="upload_image">
+            <img src={image} width="600px" height="600px"></img>
+          </div>
+          <div className="detailContent">
+            <div>{article.contents}</div>
+          </div>
+        </div>
+        <div className="btn">
+          <input
+            className="btnList"
+            type="button"
+            value="글목록"
+            onClick={handlelist}
+          ></input>
+          <input
+            className="reMake"
+            type="button"
+            value="수정"
+            id={article.num}
+            onClick={handleupdateform}
+          ></input>
+          <input
+            className="detailDelete"
+            type="button"
+            value="삭제"
+            id={article.num}
+            onClick={handleDelete}
+          ></input>
+        </div>
+      </div>
     </div>
   );
 };

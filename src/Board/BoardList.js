@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import BoardArticle from "./BoardArticle";
 import PageLink from "./PageLink";
 import Modal from "./Modal";
+import "./Board.css";
 
 // 게시판 화면 리스트
 const BoardList = ({
@@ -43,18 +44,24 @@ const BoardList = ({
   if (boardlist.boardList.length === 0) {
     return (
       <div>
-        <table width="700px" border="1" align="center">
-          <thead>
-            <tr>
-              <th width="60">번호</th>
-              <th width="240">제목</th>
-              <th width="100">작성자</th>
-              <th width="100">작성일</th>
-            </tr>
-          </thead>
-        </table>
-        <div>
+        <div className="boardTitle">
+          <h2>후기 게시판</h2>
+        </div>
+        <div className="boardList">
+          <table width="800px" align="center">
+            <thead>
+              <tr>
+                <th width="60">num</th>
+                <th width="240">제목</th>
+                <th width="100">글쓴이</th>
+                <th width="100">시간</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div className="wwwDD">
           <button onClick={openModal}>글쓰기</button>
+
           {modal === true ? (
             <Modal
               handlelist={handlelist}
@@ -68,31 +75,36 @@ const BoardList = ({
   } else {
     return (
       <div>
-        <table width="700px" border="1" align="center">
-          <thead>
-            <tr>
-              <th width="60">번호</th>
-              <th width="240">제목</th>
-              <th width="100">작성자</th>
-              <th width="100">작성일</th>
-            </tr>
-          </thead>
-          <tbody>
-            {boardlist.boardList &&
-              boardlist.boardList.map((article) => {
-                return (
-                  <BoardArticle
-                    actionmode={actionmode}
-                    article={article}
-                    key={article.BOARD_NUM}
-                    handlelist={handlelist}
-                    handledetail={handledetail}
-                    handleupdateform={handleupdateform}
-                  />
-                );
-              })}
-          </tbody>
-        </table>
+        <div className="boardTitle">
+          <h2>후기 게시판</h2>
+        </div>
+        <div className="boardList">
+          <table width="800px" align="center">
+            <thead>
+              <tr>
+                <th width="60">num</th>
+                <th width="240">제목</th>
+                <th width="100">글쓴이</th>
+                <th width="100">시간</th>
+              </tr>
+            </thead>
+            <tbody>
+              {boardlist.boardList &&
+                boardlist.boardList.map((article) => {
+                  return (
+                    <BoardArticle
+                      actionmode={actionmode}
+                      article={article}
+                      key={article.BOARD_NUM}
+                      handlelist={handlelist}
+                      handledetail={handledetail}
+                      handleupdateform={handleupdateform}
+                    />
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
         <table align="center">
           <tr>
             <td>
@@ -104,8 +116,11 @@ const BoardList = ({
                 })}
             </td>
           </tr>
-          <div>
-            <button onClick={openModal}>글쓰기</button>
+          <div className="writeBtnt">
+            <button className="writeBtn" onClick={openModal}>
+              글쓰기
+            </button>
+
             {modal === true ? (
               <Modal
                 handlelist={handlelist}
