@@ -11,20 +11,45 @@
     width: 100%;
     justify-content: space-evenly;
 }
+.MyPagesWel p{
+    font-size: 25px;
+    padding: 0;
+}
+
+
 
 .MyPagesDet{
     width: 60%;
     border: 1px solid black;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
 }
 .MyPagesDetAddr{
     display: flex;
 }
-
+.MyPagesDetID{
+    display: flex;
+}
 .MyPagesDetTel{
     display: flex;
 }
 .MyPageLook{
     border: 1px solid black;
 }
+.MyPageLook h3{
+    text-align: center;
+}
+.payList{
+    width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.payLists{
+    margin-right: 100px;
+    margin-bottom: 5px;
+}
+
