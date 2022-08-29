@@ -71,3 +71,6 @@ margin: 20px 50px;
 .payment_button{
 
 }
+.payment_total_price{
+    display: none;
+}

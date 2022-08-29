@@ -90,3 +90,88 @@
     display: flex;
     align-items: center;
 }
+
+.MypageInform{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: beige;
+    height: 300px;
+}
+
+.MypageInformCall{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.MypageInformCall h5{
+    font-size: 37px;
+    font-weight: 700;
+}
+.MypageInformCallSS{
+    margin-top: 20px;
+}
+.MypageInformCallSSF{
+    font-size: 27px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.MypageInformSNS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.MypageInformSNS h5{
+    font-size: 37px;
+    font-weight: 700;
+}
+.MypageInformSNSCircle{
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+.MypageInformTalk{
+    text-align: center;
+}
+
+.MypageInformTalk h5{
+    font-size: 37px;
+    font-weight: 700;
+}
+.MypageInformTalkDD{
+    display: flex;
+    flex-direction: column;
+}
+.MypageInformTalkDD p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.MypageInformTalkDDDK{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid lightgoldenrodyellow;
+}
+.MypageInformTalkDDDK a{
+    text-decoration: none;
+    color: black;
+}
+.MypageInformTalkDDDKBTN{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 70px;
+}

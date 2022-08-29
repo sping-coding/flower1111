@@ -82,7 +82,7 @@ const BoardList = ({
           <table width="800px" align="center">
             <thead>
               <tr>
-                <th width="60">num</th>
+                <th width="60">번호</th>
                 <th width="240">제목</th>
                 <th width="100">글쓴이</th>
                 <th width="100">시간</th>

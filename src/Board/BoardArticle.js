@@ -8,7 +8,12 @@ const BoardArticle = ({
     <tr className="ArticleTr">
       <td>{article.BOARD_NUM}</td>
       <td>
-        <a href="#" id={article.BOARD_NUM} onClick={handledetail}>
+        <a
+          className="boardLink"
+          href="#"
+          id={article.BOARD_NUM}
+          onClick={handledetail}
+        >
           {article.TITLE}
         </a>
       </td>

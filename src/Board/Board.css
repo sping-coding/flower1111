@@ -129,11 +129,11 @@
 .detailDelete {
   /* display: flex;
   justify-content: flex-end; */
-  background-color: black;
-  color: white;
-  width: 150px;
-  height: 40px;
-  font-size: large;
+  font-size: 50px;
+  font-weight: 500;
+  color: grey;
+  border: none;
+  background-color: white;
 }
 
 /* boardWriter */
@@ -284,4 +284,10 @@
   margin-top: 10px;
   display: flex;
   justify-content: center;
+}
+.boardLink {
+  text-decoration: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
