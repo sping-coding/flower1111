@@ -43,7 +43,7 @@
 
 /* 두번째 해더 */
 .MainSecondHeaderItems{
-  background-color: whitesmoke;
+  background-color: #d9d3cc;
   height: 900px;
 }
 .MainSecondHeaderItems span{
@@ -53,7 +53,7 @@
   font-size: 23px;
 }
 .MainSecondHeaderItems h1{
-  margin-top: 1px;
+  margin-top: 0px;
   padding-top: 80px;
   text-align: center;
   font-size: 90px;

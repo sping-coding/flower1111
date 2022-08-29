@@ -6,7 +6,17 @@ const BoardArticle = ({
 }) => {
   return (
     <tr className="ArticleTr">
-      <td>{article.BOARD_NUM}</td>
+      {/* <td>{article.BOARD_NUM}</td> */}
+      <td>
+        <a
+          className="boardLink"
+          href="#"
+          id={article.BOARD_NUM}
+          onClick={handledetail}
+        >
+          {article.BOARD_NUM}
+        </a>
+      </td>
       <td>
         <a
           className="boardLink"

@@ -89,7 +89,7 @@ const MypageForm = () => {
           <div className="MypageInformTalkDD">
             <p>실시간 상담 가능합니다</p>
             <div className="MypageInformTalkDDDK">
-              <a href="https://pf.kakao.com/_fRXlxj">
+              <a href="https://pf.kakao.com/_fRXlxj" target="_blank">
                 <div className="MypageInformTalkDDDKBTN">카카오톡 상담</div>
               </a>
             </div>
