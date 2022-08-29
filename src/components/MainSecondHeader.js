@@ -14,11 +14,11 @@ const MainSecondHeader = () => {
         </div>
         <div className="MainSecondHeaderItemsGrass">
           <img src={두번째풀} />
-          <span>꽃의 가치를 올려줄 그린소재</span>
+          <span>친환경 그린소재</span>
         </div>
         <div className="MainSecondHeaderItemsPackage">
           <img src={두번째포장지} />
-          <span>크룰리아의 포장</span>
+          <span>크룰리아만의 포장</span>
         </div>
       </div>
     </div>

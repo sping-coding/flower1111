@@ -5,18 +5,30 @@ const HomepageChangeBox = (props) => {
   return (
     <div className="HomepageChangeBoxs">
       <div className="HomepageChangeBoxFirst">
-        <img
-          src={props.item && props.item.name}
-          className="HomepageChangeBoxImgF"
-        />
-        <h3>{props.item && props.item.p}</h3>
+        <div>
+          <img
+            src={props.item && props.item.name}
+            className="HomepageChangeBoxImgF"
+            width="300px"
+            heigth="300px"
+          />
+        </div>
+        <div className="HomepageChangeBoxFirstText">
+          <h3>{props.item && props.item.p}</h3>
+        </div>
       </div>
       <div className="HomepageChangeBoxSecond">
-        <h3>{props.item && props.item.p2}</h3>
-        <img
-          src={props.item && props.item.name2}
-          className="HomepageChangeBoxImgS"
-        />
+        <div>
+          <h3>{props.item && props.item.p2}</h3>
+        </div>
+        <div>
+          <img
+            src={props.item && props.item.name2}
+            className="HomepageChangeBoxImgS"
+            width="300px"
+            heigth="300px"
+          />
+        </div>
       </div>
     </div>
   );

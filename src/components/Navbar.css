@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap');
 .MainNavBar{
     display: flex;
     flex-direction: row;
@@ -5,7 +6,7 @@
     align-items: center;
     background-color: #cfcaca;
     border-bottom: 1px solid #c8c8c8;
-    height: 70px;
+    height: 80px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -13,23 +14,33 @@
 }
 .MainLogo{
     color: white;
-    padding-left: 25px;
+    padding-left: 60px;
     cursor: pointer;
 }
-.MainLogo img{
-    width: 270px;
-    height: 70px;
+.MainLogo p{
+    padding-top: 15px;
+    font-size: 50px;
+    font-family: 'Taviraj', serif;
+    color: black;
 }
 .MainMenu{
-    padding-right: 30px;
-    margin: 30px;
+    font-family:'Nanum Gothic', sans-serif;
+    padding-right: 20px;
+    margin: 37px;
 }
+.MainMenuSBtn{
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
 .MainMenu button{
     border: none;
     background-color: #cfcaca;
-    font-size: 25px;
+    font-size: 30px;
     color: black;
-    
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-right: 17px;
 }
 /* .MainMenu button:hover{
     color: ghostwhite;

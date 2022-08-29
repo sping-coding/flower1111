@@ -17,8 +17,15 @@ const HomePage = () => {
         <div className="MainHeader1"></div>
         <div className="MainHeader2">
           <div className="MainHeader2T">
-            <h1>Make your own flower</h1>
-            <span>당신이 원하는 꽃의 조합</span>
+            <h1>MAKE YOUR OWN FLOWER</h1>
+            {/* <h3>당신이 원하는 꽃의 조합</h3> */}
+            <p>
+              ONLY ONE FOR YOU
+              <br />
+              FROM CEARULEA
+              <br />
+              REASONAL FLOWERS AND ROSE
+            </p>
           </div>
         </div>
         <div className="MainHeader3"></div>

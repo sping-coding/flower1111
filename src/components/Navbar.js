@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import { BsPersonFill, BsPerson } from "react-icons/bs";
-import Logo from "../images/로고.png";
+import Logo from "../images/네비로고.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -47,15 +47,15 @@ const Navbar = () => {
     return (
       <div className="MainNavBar">
         <div onClick={gotoHome} className="MainLogo">
-          <img src={Logo} />
+          <p>CAERULEA</p>
         </div>
         <div className="MainMenu">
           <button className="MainMenuFBtn" onClick={goToProduct}>
-            쇼핑몰
+            SHOP
           </button>
           {/* <span>I</span> */}
           <button className="MainMenuSBtn" onClick={goToBoard}>
-            커뮤니티
+            COMMUNITY
           </button>
           {/* <span>I</span> */}
           <button className="NavbarBtn">
@@ -77,11 +77,11 @@ const Navbar = () => {
     return (
       <div className="MainNavBar">
         <div className="MainLogo" onClick={gotoHome}>
-          <img src={Logo} />
+          <p>CAERULEA</p>
         </div>
         <div className="MainMenu">
-          <button onClick={goToProduct}>쇼핑몰</button>
-          <button onClick={goToBoard}>커뮤니티</button>
+          <button onClick={goToProduct}>SHOP</button>
+          <button onClick={goToBoard}>COMMUNITY</button>
           <button>
             <Dropdown>
               <Dropdown.Toggle variant="dark">

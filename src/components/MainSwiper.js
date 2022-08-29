@@ -14,7 +14,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 const MainSwiper = () => {
   return (
-    <>
+    <div className="swiperBackground">
       <Swiper
         cssMode={true}
         navigation={true}
@@ -37,7 +37,7 @@ const MainSwiper = () => {
           <img src={fourth} />>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

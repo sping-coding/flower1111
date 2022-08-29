@@ -14,10 +14,9 @@ function MainPopular() {
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const images = [
     `${popular1}`,
-    `${popular2}`,
+    // `${popular2}`,
     `${popular3}`,
     `${popular4}`,
-    `${popular5}`,
     `${popular6}`,
   ];
 
@@ -35,7 +34,7 @@ function MainPopular() {
     <div className="mainpopularTs">
       <div className="mainpopularT">
         <h2>이달의 꽃</h2>
-        <p>RoseDay</p>
+        <p>Rose Day</p>
       </div>
       <div className="mainpopulari">
         {images.map((src, index) => (
