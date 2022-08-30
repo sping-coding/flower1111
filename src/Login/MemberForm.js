@@ -3,7 +3,7 @@ import "./MemberForm.css";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import memberimg from "./memberimg2.png";
+import memberimg from "./memberimg4.png";
 
 const MemberForm = () => {
   const idRef = useRef(); //아이디
@@ -146,78 +146,88 @@ const MemberForm = () => {
   }, [useCheck, personalCheck, ageCheck, marketingCheck]);
 
   return (
-    <div className="MForms">
-      <div>
-        <form>
-          <img src={memberimg} />
-
-          <h3>ID</h3>
-          <div>
-            <input
-              type="text"
-              name="id"
-              ref={idRef}
-              placeholder="아이디를 입력하세요"
-              defaultValue=""
-              className="ID"
-            />
-
-            <h3>PW</h3>
-            <div>
-              <input
-                type="password"
-                name="pw"
-                ref={pwRef}
-                placeholder="영문+숫자+특수문자 8자리"
-                defaultValue=""
-                className="PW"
-              />
+    <div className="MFormsBack">
+      <div className="MForms">
+        <div>
+          <form>
+            <div className="MFORMTIT">
+              <div className="MFORMTITH">
+                <h1>CAERULEA</h1>
+              </div>
+              <h4>bouquet customization</h4>
             </div>
-
-            <h3>PWcheck</h3>
+            <h3 className="HTextAlign">ID</h3>
             <div>
-              <input
-                type="password"
-                name="pwch"
-                ref={pwchRef}
-                defaultValue=""
-                placeholder="비밀번호를 확인해주세요"
-              />
-            </div>
+              <div className="InputGoCenter">
+                <input
+                  type="text"
+                  name="id"
+                  ref={idRef}
+                  placeholder="아이디를 입력하세요"
+                  defaultValue=""
+                  className="MemberInput"
+                />
+              </div>
+              <h3 className="HTextAlign">PW</h3>
+              <div className="InputGoCenter">
+                <input
+                  type="password"
+                  name="pw"
+                  ref={pwRef}
+                  placeholder="영문+숫자+특수문자 8자리"
+                  defaultValue=""
+                  className="MemberInput"
+                />
+              </div>
 
-            <h3>NickName</h3>
-            <div>
-              <input
-                type="text"
-                name="nickname"
-                ref={nickRef}
-                placeholder="닉네임을 입력하세요"
-                defaultValue=""
-              />
-            </div>
+              <h3 className="HTextAlign">PWcheck</h3>
+              <div className="InputGoCenter">
+                <input
+                  type="password"
+                  name="pwch"
+                  ref={pwchRef}
+                  defaultValue=""
+                  placeholder="비밀번호를 확인해주세요"
+                  className="MemberInput"
+                />
+              </div>
 
-            <h3>Addr</h3>
-            <div>
-              <input
-                type="text"
-                name="addr"
-                ref={addrRef}
-                placeholder="주소를 입력하세요"
-                defaultValue=""
-              />
-            </div>
+              <h3 className="HTextAlign">NickName</h3>
+              <div className="InputGoCenter">
+                <input
+                  type="text"
+                  name="nickname"
+                  ref={nickRef}
+                  placeholder="닉네임을 입력하세요"
+                  defaultValue=""
+                  className="MemberInput"
+                />
+              </div>
 
-            <h3>Mobile</h3>
-            <div>
-              <input
-                type="tel"
-                name="tel"
-                ref={telRef}
-                placeholder="11자리"
-                maxLength="11"
-              />
-            </div>
-            {/* -
+              <h3 className="HTextAlign">Address</h3>
+              <div className="InputGoCenter">
+                <input
+                  type="text"
+                  name="addr"
+                  ref={addrRef}
+                  placeholder="주소를 입력하세요"
+                  defaultValue=""
+                  className="MemberInput"
+                />
+              </div>
+
+              <h3 className="HTextAlign">Mobile</h3>
+              <div className="InputGoCenter">
+                <input
+                  type="tel"
+                  name="tel"
+                  ref={telRef}
+                  placeholder="휴대폰 11자리 입력하세요"
+                  maxLength="11"
+                  className="MemberInput"
+                />
+              </div>
+              {/* -
             <input
               type="tel"
               name="mobile2"
@@ -235,94 +245,96 @@ const MemberForm = () => {
               size="4"
               maxLength="4"
             /> */}
-          </div>
-          <div>
-            <br></br>
-          </div>
-          <div className="MFormsBtns">
-            <input
-              className="MFormsBtn"
-              type="button"
-              value="회원등록"
-              onClick={handleMember}
-            />
+            </div>
+            <div>
+              <br></br>
+            </div>
+            <div className="MFormsBtns">
+              <input
+                className="MFormsBtn"
+                type="button"
+                value="회원등록"
+                onClick={handleMember}
+              />
+            </div>
+          </form>
+        </div>
+        <form method="post" action="" className="agreement_Form">
+          <div className="agreement_box">
+            <hr />
+            <div className="agreement_all">
+              <input
+                type="checkbox"
+                id="all-check"
+                checked={allCheck}
+                onChange={allBtnEvent}
+              />
+              <label for="all-check">
+                전체동의<span>(선택포함)</span>
+              </label>
+              <p>
+                고객님의 편의를 위하여 전체동의 기능을 제공하고 있습니다.
+                <br />
+                전체동의 하시겠습니까?
+              </p>
+            </div>
+            <hr />
+            <div className="agreement_item">
+              <input
+                type="checkbox"
+                id="check1"
+                checked={useCheck}
+                onChange={useBtnEvent}
+              />
+              <label for="check1">
+                <span>(필수)</span>이용약관에 동의합니다.
+              </label>
+            </div>
+            <div className="agreement_item">
+              <input
+                type="checkbox"
+                id="check2"
+                checked={personalCheck}
+                onChange={personalBtnEvent}
+              />
+              <label for="check2">
+                <span>(필수)</span>개인정보 수집 및 이용에 동의합니다.
+              </label>
+            </div>
+            <div className="agreement_item">
+              <input
+                type="checkbox"
+                id="check3"
+                checked={ageCheck}
+                onChange={ageBtnEvent}
+              />
+              <label for="check3">
+                <spans>(필수)</spans>만 14세 이상입니다.
+              </label>
+            </div>
+            <div className="agreement_item">
+              <input
+                type="checkbox"
+                id="check4"
+                checked={marketingCheck}
+                onChange={marketingBtnEvent}
+              />
+              <label for="check4">
+                <span>(선택)</span>마케팅 정보 수신에 동의합니다.
+              </label>
+            </div>
+            <p className="singIn">
+              회원가입3,000원 쿠폰, 기간한정혜택, 신제품 소식 등은 마케팅
+              정보수신
+              <br />
+              동의(이메일,SMS모두 수신동의)시에만 받아보실 수 있습니다.
+              <br />
+              CAERULEA 공식 온라인몰 <a href="#">이용약관</a> 및{" "}
+              <a href="#">개인정보 처리방침</a> 자세히보기
+            </p>
           </div>
         </form>
       </div>
-      <form method="post" action="" className="agreement_Form">
-        <div className="agreement_box">
-          <hr />
-          <div className="agreement_all">
-            <input
-              type="checkbox"
-              id="all-check"
-              checked={allCheck}
-              onChange={allBtnEvent}
-            />
-            <label for="all-check">
-              전체동의<span>(선택포함)</span>
-            </label>
-            <p>
-              고객님의 편의를 위하여 전체동의 기능을 제공하고 있습니다.
-              <br />
-              전체동의 하시겠습니까?
-            </p>
-          </div>
-          <hr />
-          <div className="agreement_item">
-            <input
-              type="checkbox"
-              id="check1"
-              checked={useCheck}
-              onChange={useBtnEvent}
-            />
-            <label for="check1">
-              <span>(필수)</span>이용약관에 동의합니다.
-            </label>
-          </div>
-          <div className="agreement_item">
-            <input
-              type="checkbox"
-              id="check2"
-              checked={personalCheck}
-              onChange={personalBtnEvent}
-            />
-            <label for="check2">
-              <span>(필수)</span>개인정보 수집 및 이용에 동의합니다.
-            </label>
-          </div>
-          <div className="agreement_item">
-            <input
-              type="checkbox"
-              id="check3"
-              checked={ageCheck}
-              onChange={ageBtnEvent}
-            />
-            <label for="check3">
-              <spans>(필수)</spans>만 14세 이상입니다.
-            </label>
-          </div>
-          <div className="agreement_item">
-            <input
-              type="checkbox"
-              id="check4"
-              checked={marketingCheck}
-              onChange={marketingBtnEvent}
-            />
-            <label for="check4">
-              <span>(선택)</span>마케팅 정보 수신에 동의합니다.
-            </label>
-          </div>
-          <p className="singIn">
-            회원가입3,000원 쿠폰, 기간한정혜택, 신제품 소식 등은 마케팅 정보수신
-            <br />
-            동의(이메일,SMS모두 수신동의)시에만 받아보실 수 있습니다.
-            <br />
-            CAERULEA 공식 온라인몰 <a href="#">이용약관</a> 및{" "}
-            <a href="#">개인정보 처리방침</a> 자세히보기
-          </p>
-        </div>
-      </form>
     </div>
   );
 };

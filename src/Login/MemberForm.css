@@ -1,23 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap');
+.MFormsBack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2ecec;
+}
 .MForms{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 70px;
+    background-color: #fcfcfc;
 }
-.MForms h1{
-    font-size:50px;
+/* .MForms img{
+    margin-top: 20px;
+    margin-bottom: 35px;
+} */
+.MFORMTIT{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    
+}
+.MFORMTITH{
+    border-bottom: 4px solid #595959;
+}
+.MFORMTIT h1{
+    font-family: 'Taviraj', serif;
+    font-size: 50px;
+    margin-bottom: 1px;
+    color: #595959;
+}
+.MFORMTIT h4{
+    font-family: 'Taviraj', serif;
+    font-size: 20px;
+    color: #595959;
+    padding-top: 3px;
 }
 .MFormsBtns{
     display: flex;
     justify-content: center;
-    padding-right: 80px;
 }
 .MFormsBtn{
     border: none;
     background-color: beige;
-    height: 30px;
+    border-radius: 10px;
+    height: 40px;
+    width: 120px;
+    margin: 10px;
 }
-.FirstI{
+.HTextAlign{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.MemberInput{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #fcfcfc;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.InputGoCenter{
     display: flex;
+    justify-content: center;
 }
