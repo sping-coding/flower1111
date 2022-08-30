@@ -3,6 +3,7 @@ import "./MemberForm.css";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import memberimg from "./memberimg2.png";
 
 const MemberForm = () => {
   const idRef = useRef(); //아이디
@@ -148,7 +149,7 @@ const MemberForm = () => {
     <div className="MForms">
       <div>
         <form>
-          <h1>CAERULEA</h1>
+          <img src={memberimg} />
 
           <h3>ID</h3>
           <div>
@@ -158,6 +159,7 @@ const MemberForm = () => {
               ref={idRef}
               placeholder="아이디를 입력하세요"
               defaultValue=""
+              className="ID"
             />
 
             <h3>PW</h3>
@@ -168,6 +170,7 @@ const MemberForm = () => {
                 ref={pwRef}
                 placeholder="영문+숫자+특수문자 8자리"
                 defaultValue=""
+                className="PW"
               />
             </div>
 

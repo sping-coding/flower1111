@@ -64,7 +64,7 @@ const LoginForm = () => {
       <div className="LoginForm">
         <div className="LoginForms" align="center">
           <form>
-            <h1>CAERULEA</h1>
+            <h1>login</h1>
             <div>
               <input
                 className="ID"
@@ -117,10 +117,10 @@ const LoginForm = () => {
               <div className="N">N</div>
               <span className="nlog">네이버 로그인</span>
             </div>
-            <div className="facebookL">
+            {/* <div className="facebookL">
               <div className="f">f</div>
               <span className="flog">페이스북 로그인</span>
-            </div>
+            </div> */}
           </form>
         </div>
         <div>
