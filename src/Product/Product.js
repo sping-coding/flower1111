@@ -321,10 +321,7 @@ function Product() {
                         <div className="prototype__title">{pulip.irum}</div>
                         <p className="prototype__price">{pulip.price}원</p>
                       </div>
-                      <div
-                        className="btn btn--primary float--right"
-                        onClick={click}
-                      >
+                      <div className=" float--right" onClick={click}>
                         <MdShoppingCart />
                       </div>
                     </div>

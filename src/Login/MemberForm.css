@@ -45,11 +45,12 @@
 }
 .MFormsBtn{
     border: none;
-    background-color: beige;
+    background-color: #595959;
     border-radius: 10px;
     height: 40px;
     width: 120px;
     margin: 10px;
+    color: white;
 }
 .HTextAlign{
     text-align: center;
