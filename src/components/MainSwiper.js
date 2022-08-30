@@ -1,10 +1,9 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import first from "../images/3.png";
-import second from "../images/4.png";
-import thired from "../images/8.png";
-import fourth from "../images/9.png";
+import first from "../images/swiper1.png";
+import second from "../images/swiper2.png";
+import thired from "../images/swiper3.png";
 
 // Import Swiper styles
 import "swiper/css";

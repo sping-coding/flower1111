@@ -6,48 +6,60 @@
     align-items: center;
     background-color: #cfcaca;
     border-bottom: 1px solid #c8c8c8;
-    height: 80px;
+    height: 75px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 3;
+   
 }
 .MainLogo{
+    height: 75px;
     color: white;
     padding-left: 60px;
     cursor: pointer;
 }
 .MainLogo p{
-    padding-top: 15px;
-    font-size: 50px;
+    line-height: 80px;
+    height: 75px;
+    font-size: 42px;
     font-family: 'Taviraj', serif;
     color: black;
+    margin: 0;
+    letter-spacing: 6px;
 }
+
 .MainMenu{
     font-family:'Nanum Gothic', sans-serif;
     padding-right: 20px;
     margin: 37px;
+    display: flex;
 }
 .MainMenuSBtn{
     margin-left: 15px;
     margin-right: 10px;
+   
 }
-
+.navToggle{
+    margin-top: 30px;
+}
 .MainMenu button{
+    
     border: none;
     background-color: #cfcaca;
-    font-size: 30px;
+    font-size: 28px;
     color: black;
     letter-spacing: 2px;
-    font-weight: 400;
+    font-weight: 500;
     margin-right: 17px;
+    
 }
 /* .MainMenu button:hover{
     color: ghostwhite;
     font-size: 35px;
 } */
 .MainMenu button:focus{
-    color: green
+    color: #95A18B;
 }
 .MainMenu span{
     font-size: 20px;

@@ -20,8 +20,8 @@
   width: 70%;
 }
 .boardList thead {
-  border-bottom: 3px solid grey;
-  border-top: 3px solid black;
+  border-bottom: 1px solid grey;
+  /* border-top: 2px solid black; */
   height: 60px;
   /* padding: 15px 10px 15px 10px; */
 }
@@ -37,7 +37,7 @@
 
 } */
 .ArticleTr {
-  border-bottom: 3px solid grey;
+  border-bottom: 1px solid grey;
   padding: 20px;
   height: 50px;
 }
@@ -73,7 +73,7 @@
   justify-content: center;
 }
 .BD {
-  margin-top: 100px;
+  margin-top: 75px;
   width: 90%;
 }
 .BDTitle {
@@ -172,7 +172,7 @@
   /* align-items: center; */
   background-color: white;
   text-align: center;
-  height: 700px;
+  height: 550px;
   border: 1px solid black;
   width: 80%;
   
@@ -225,7 +225,11 @@
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
+.writerImg{
+  display: flex;
+  flex-direction: column-reverse;
 
+}
 .filebox input[type="file"] {
   position: absolute;
   width: 1px;
@@ -237,19 +241,18 @@
   border: 0;
 }
 
-.writerContets {
-  /* width: 70%;
-  padding-top: 10px; */
+.writerContetsss{
+  display: flex;
+  flex-direction: column;
 }
 .uploadsBtn {
   background-color: black;
   color: white;
-  width: 300px;
+  width: 200px;
   height: 40px;
 }
-.writeUploads {
-  padding-left: 40%;
-}
+
+
 
 /* .bbbbb {
   display: flex;
@@ -285,17 +288,17 @@
   width: 80%;
 }
 .input_title:hover {
-  border: 3px black solid;
+  border: 1px rgb(177, 177, 177) solid;
 }
 .input_contents {
   border: none;
   text-align: center;
   height: 300px;
-  width: 700px;
+  width: 400px;
   background-color: #fcfcfc;
 }
 .input_contents:hover {
-  border: 3px black solid;
+  border: 1px rgb(177, 177, 177) solid;
 }
 .updateBtn {
   background-color: black;

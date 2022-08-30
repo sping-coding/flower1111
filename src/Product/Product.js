@@ -312,7 +312,7 @@ function Product() {
                     <div className="prototype" key={pulip.num}>
                       <div style={{ padding: "25px 0 33px 0" }}>
                         <img
-                          className="prototype_artwork prototype__edit"
+                          className="prototype_artwork prototype__edit hiss"
                           src={pulip.image_url}
                           style={{ objectFit: "contain" }}
                         />

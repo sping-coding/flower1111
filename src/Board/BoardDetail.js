@@ -48,7 +48,7 @@ const BoardDetail = ({
           {/* <hr></hr> */}
           <div className="BDcontainer">
             <div className="upload_image">
-              <img src={image} width="400px" height="350px"></img>
+              <img src={image} alt="이미지가 없습니다." width="400px" height="350px"></img>
             </div>
             <div className="detailContent">
               <div>{article.contents}</div>

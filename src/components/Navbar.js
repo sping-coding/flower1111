@@ -80,22 +80,25 @@ const Navbar = () => {
           <p>CAERULEA</p>
         </div>
         <div className="MainMenu">
-          <button onClick={goToProduct}>SHOP</button>
-          <button onClick={goToBoard}>COMMUNITY</button>
-          <button>
+          <div>
+          <button classname="navlink" onClick={goToProduct}>SHOP</button>
+          <button classname="navlink" onClick={goToBoard}>COMMUNITY</button>
+          </div>
+          
             <Dropdown>
               <Dropdown.Toggle variant="dark">
                 <BsPersonFill className="navPerson" />
               </Dropdown.Toggle>
-
+              <div className="navtoggle">
               <Dropdown.Menu>
                 <Dropdown.Item>{usernick} 님 환영합니다</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={handleLogout}>로그아웃</Dropdown.Item>
                 <Dropdown.Item onClick={gotoMypage}>마이페이지</Dropdown.Item>
               </Dropdown.Menu>
+              </div>
             </Dropdown>
-          </button>
+          
         </div>
       </div>
     );

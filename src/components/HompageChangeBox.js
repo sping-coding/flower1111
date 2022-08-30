@@ -9,8 +9,8 @@ const HomepageChangeBox = (props) => {
           <img
             src={props.item && props.item.name}
             className="HomepageChangeBoxImgF"
-            width="300px"
-            heigth="300px"
+            width="250px"
+            heigth="250px"
           />
         </div>
         <div className="HomepageChangeBoxFirstText">
@@ -25,8 +25,8 @@ const HomepageChangeBox = (props) => {
           <img
             src={props.item && props.item.name2}
             className="HomepageChangeBoxImgS"
-            width="300px"
-            heigth="300px"
+            width="250px"
+            heigth="250px"
           />
         </div>
       </div>

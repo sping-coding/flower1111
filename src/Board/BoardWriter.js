@@ -76,21 +76,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
               ></input>
             </div>
           </div>
-          {/* <hr /> */}
-          {/* <div className="wwriter">
-          <input
-            type="text"
-            name="writer"
-            size="68"
-            ref={writerRef}
-            value={window.sessionStorage.getItem("nickname")}
-            placeholder="글쓴이"
-          ></input>
-        </div> */}
           <div className="writerCttImg">
-            {/* <div>
-              <h3>이미지</h3>
-            </div> */}
             <div className="writerImg">
               <div className="filebox">
                 <label for="ex_file">파일 선택</label>
@@ -102,7 +88,6 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
                   accept="image/*"
                   onChange={onImage}
                 />
-                {/* <BsFillXSquareFill /> */}
               </div>
               <div>
                 {image_name && (
@@ -115,22 +100,23 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
                 )}
               </div>
             </div>
-            <div className="writerContets">
-              <input
-                type="text"
-                className="input_contents"
-                name="content"
-                ref={contentsRef}
-                placeholder="내용"
-              ></input>
+            <div className="writerContetsss">
+              <div className="writerContets">
+                <input
+                  type="text"
+                  className="input_contents"
+                  name="content"
+                  ref={contentsRef}
+                  placeholder="내용"
+                ></input>
+              </div>
+
+              <div className="writeUploads">
+                <button onClick={handleInsert} className="uploadsBtn">
+                  글 올리기
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="writeUploads">
-            <button onClick={handleInsert} className="uploadsBtn">
-              글 올리기
-            </button>
-            {/* &nbsp;
-          <input type="reset" value="취소" onClick={openModal}></input> */}
           </div>
         </form>
       </div>
