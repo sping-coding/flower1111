@@ -28,7 +28,8 @@ const BoardDetail = ({
       <div className="BBDD">
         <div className="BD">
           <div className="BDTitle">
-            <h1>제목</h1>
+            {/* <h1>제목</h1> */}
+            <h1>{article.title}</h1>
             <div className="BDBTN">
               <button
                 className="detailOut"
@@ -47,13 +48,13 @@ const BoardDetail = ({
           {/* <hr></hr> */}
           <div className="BDcontainer">
             <div className="upload_image">
-              <img src={image} width="300px" height="250px"></img>
+              <img src={image} width="400px" height="350px"></img>
             </div>
             <div className="detailContent">
               <div>{article.contents}</div>
             </div>
           </div>
-          <div className="btn">
+          <div className="btnzzz">
             <input
               className="btnList"
               type="button"
