@@ -33,9 +33,6 @@ const MainSwiper = () => {
         <SwiperSlide>
           <img src={thired} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={fourth} />>
-        </SwiperSlide>
       </Swiper>
     </div>
   );

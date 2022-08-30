@@ -237,11 +237,11 @@
 
 /* 메인 화면 전환 페이지 */
 .swiperBackground{
+  height: 700px;
   background-color: #f9f3f380;
 }
 .swiper {
-  width: 90%;
-  height: 700px;
+  
   margin-bottom: 0px;
 }
 
@@ -266,8 +266,9 @@
 }
 
 .swiper-slide img {
+  padding-top: 6px;
   display: block;
-  width: 60%;
+  width: 87%;
   object-fit: 100%;
   height: auto;
 }

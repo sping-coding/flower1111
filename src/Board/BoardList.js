@@ -51,7 +51,7 @@ const BoardList = ({
           <table width="800px" align="center">
             <thead>
               <tr>
-                <th width="60">num</th>
+                <th width="60">번호</th>
                 <th width="240">제목</th>
                 <th width="100">글쓴이</th>
                 <th width="100">시간</th>
@@ -116,20 +116,20 @@ const BoardList = ({
                 })}
             </td>
           </tr>
-          <div className="writeBtnt">
-            <button className="writeBtn" onClick={openModal}>
-              글쓰기
-            </button>
-
-            {modal === true ? (
-              <Modal
-                handlelist={handlelist}
-                modal={modal}
-                openModal={openModal}
-              />
-            ) : null}
-          </div>
         </table>
+        <div className="writeBtnt">
+          <button className="writeBtn" onClick={openModal}>
+            글쓰기
+          </button>
+
+          {modal === true ? (
+            <Modal
+              handlelist={handlelist}
+              modal={modal}
+              openModal={openModal}
+            />
+          ) : null}
+        </div>
       </div>
     );
   }

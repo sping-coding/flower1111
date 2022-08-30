@@ -42,27 +42,43 @@
   height: 50px;
 }
 .writeBtn {
-  background-color: black;
-  color: white;
-  width: 100px;
+  background-color: #CFCACA;
+  color: black;
+  width: 150px;
+  height: 37px;
   /* display: flex; */
   /* justify-content: ; */
+  margin-right: 220PX;
+  border: none;
+  border-radius: 3px;
 }
 .writeBtnt {
   display: flex;
+  justify-content: flex-end;
 }
 
 /* BoardDetail */
+.BBBDDD{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2ecec;
+  
+}
 .BBDD {
+  background-color: #fcfcfc;
+  height: 100vh;
+  width: 70%;
   display: flex;
   justify-content: center;
 }
 .BD {
-  margin-top: 200px;
+  margin-top: 100px;
   width: 60%;
 }
 .BDTitle {
   display: flex;
+  margin-top: 50px;
   flex-direction: column;
   border-bottom: 3px solid grey;
 }
@@ -73,11 +89,13 @@
   display: flex;
   justify-content: flex-end;
   padding-bottom: 10px;
+  margin: 0;
 }
 .BDcontainer {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  /* padding: 40px; */
+  margin-top: 20px;
 }
 .write {
   display: flex;
@@ -85,10 +103,10 @@
   padding-bottom: 13px;
 }
 .user {
-  font-size: 30px;
+  font-size: 20px;
 }
 .time {
-  font-size: 30px;
+  font-size: 20px;
 }
 /* .container {
   display: flex;
@@ -102,25 +120,27 @@
   width: 100%;
 }
 
-.btn {
+.btnzzz {
   display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
+  justify-content: center;
   display: block;
-  margin-top: 3%;
+  padding: 0;
+  margin-top: 3px;
   /* width: 150px; */
 }
 .btnList {
-  background-color: black;
-  color: white;
+  background-color:  #CFCACA;
+  border: none;
+  color: black;
   width: 150px;
   height: 40px;
   font-size: large;
   /* margin-right: 10px; */
 }
 .reMake {
-  background-color: black;
-  color: white;
+  background-color:  #CFCACA;
+  border: none;
+  color: black;
   width: 150px;
   height: 40px;
   font-size: large;
@@ -129,11 +149,16 @@
 .detailDelete {
   /* display: flex;
   justify-content: flex-end; */
-  font-size: 50px;
-  font-weight: 500;
-  color: grey;
+  background-color:  #CFCACA;
   border: none;
-  background-color: white;
+  color: black;
+  width: 150px;
+  height: 40px;
+  font-size: large;
+}
+.detailOut {
+  border: none;
+  /* background-color: none; */
 }
 
 /* boardWriter */
@@ -145,7 +170,6 @@
   /* align-items: center; */
   background-color: white;
   text-align: center;
-  margin: 10%;
   height: 700px;
   width: 50%;
   border: 1px solid black;

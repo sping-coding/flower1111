@@ -24,55 +24,57 @@ const BoardDetail = ({
   };
 
   return (
-    <div className="BBDD">
-      <div className="BD">
-        <div className="BDTitle">
-          <h1>제목</h1>
-          <div className="BDBTN">
-            <button
-              className="detailDelete"
-              id={article.num}
-              onClick={handlelist}
-            >
-              x
-            </button>
+    <div className="BBBDDD">
+      <div className="BBDD">
+        <div className="BD">
+          <div className="BDTitle">
+            <h1>제목</h1>
+            <div className="BDBTN">
+              <button
+                className="detailOut"
+                id={article.num}
+                onClick={handlelist}
+              >
+                x
+              </button>
+            </div>
+            <div className="write">
+              <div className="user">{article.writer}</div>
+              <div className="time">{article.time}</div>
+            </div>
           </div>
-          <div className="write">
-            <div className="user">{article.writer}</div>
-            <div className="time">{article.time}</div>
-          </div>
-        </div>
 
-        {/* <hr></hr> */}
-        <div className="BDcontainer">
-          <div className="upload_image">
-            <img src={image} width="600px" height="600px"></img>
+          {/* <hr></hr> */}
+          <div className="BDcontainer">
+            <div className="upload_image">
+              <img src={image} width="300px" height="250px"></img>
+            </div>
+            <div className="detailContent">
+              <div>{article.contents}</div>
+            </div>
           </div>
-          <div className="detailContent">
-            <div>{article.contents}</div>
+          <div className="btn">
+            <input
+              className="btnList"
+              type="button"
+              value="글목록"
+              onClick={handlelist}
+            ></input>
+            <input
+              className="reMake"
+              type="button"
+              value="수정"
+              id={article.num}
+              onClick={handleupdateform}
+            ></input>
+            <input
+              className="detailDelete"
+              type="button"
+              value="삭제"
+              id={article.num}
+              onClick={handleDelete}
+            ></input>
           </div>
-        </div>
-        <div className="btn">
-          <input
-            className="btnList"
-            type="button"
-            value="글목록"
-            onClick={handlelist}
-          ></input>
-          <input
-            className="reMake"
-            type="button"
-            value="수정"
-            id={article.num}
-            onClick={handleupdateform}
-          ></input>
-          <input
-            className="detailDelete"
-            type="button"
-            value="삭제"
-            id={article.num}
-            onClick={handleDelete}
-          ></input>
         </div>
       </div>
     </div>
