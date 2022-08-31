@@ -58,6 +58,12 @@ function MainPopular() {
           />
         )}
       </div>
+      <div className="mainpopulariTTT">
+        <p>햇살 미니장미</p>
+        <p>스윗핑크 미니장미</p>
+        <p>아이라이너 미니장미</p>
+        <p>5번가 장미</p>
+      </div>
     </div>
   );
 }

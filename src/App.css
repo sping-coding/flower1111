@@ -305,7 +305,15 @@
 .mainpopulari img{
   border: 2px solid #d7c2c250;
 }
-
+.mainpopulariTTT{
+  display: flex;
+  justify-content: space-around;
+}
+.mainpopulariTTT p{
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 3px;
+}
 
 /* 홈페이지 change */
 .HomepageChanges{

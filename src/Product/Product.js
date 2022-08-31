@@ -2,11 +2,8 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Order from "./Order";
 import { MdShoppingCart } from "react-icons/md";
-import {
-  FaRegArrowAltCircleRight,
-  FaRegArrowAltCircleLeft,
-  FaSearchPlus,
-} from "react-icons/fa";
+import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import { Link } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
@@ -228,7 +225,10 @@ function Product() {
         <div className="container">
           <main>
             <div className="shoppingFront">
-              <h2>1. 꽃을 선택해주세요 </h2>
+              <h2>
+                <br />
+                꽃을 선택해주세요{" "}
+              </h2>
             </div>
             <div className="prototypes">
               {flowers &&
@@ -238,7 +238,7 @@ function Product() {
                   };
                   return (
                     <div className="prototype" key={flower.num}>
-                      <div style={{ padding: "25px 0 33px 0" }}>
+                      <div style={{ padding: "0px 0 33px 0" }}>
                         <img
                           className="prototype_artwork prototype__edit"
                           src={flower.image_url}
@@ -279,7 +279,7 @@ function Product() {
             </div>
           </main>
           <div className="goToNextBtn" onClick={next}>
-            <FaRegArrowAltCircleRight size="70px" />
+            <IoIosArrowForward size="80px" />
           </div>
           <Order
             orders={orders}
@@ -296,10 +296,13 @@ function Product() {
       <>
         <div className="container">
           <main>
-            <div>
-              <h2>2. 풀잎을 선택해주세요 </h2>
+            <div className="shoppingFront">
+              <h2>
+                <br />
+                그린소재을 선택해주세요{" "}
+              </h2>
               <div className="goToPrevBtn" onClick={prev}>
-                <FaRegArrowAltCircleLeft size="70" />
+                <IoIosArrowBack size="80" />
               </div>
             </div>
             <div className="prototypes">
@@ -310,7 +313,7 @@ function Product() {
                   };
                   return (
                     <div className="prototype" key={pulip.num}>
-                      <div style={{ padding: "25px 0 33px 0" }}>
+                      <div style={{ padding: "0px 0 33px 0" }}>
                         <img
                           className="prototype_artwork prototype__edit hiss"
                           src={pulip.image_url}
@@ -321,7 +324,7 @@ function Product() {
                         <div className="prototype__title">{pulip.irum}</div>
                         <p className="prototype__price">{pulip.price}원</p>
                       </div>
-                      <div className=" float--right" onClick={click}>
+                      <div className="float--right" onClick={click}>
                         <MdShoppingCart />
                       </div>
                     </div>

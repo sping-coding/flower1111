@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import e from "cors";
 import PaymentShot from "./PaymentShot";
 
 

@@ -1,24 +1,31 @@
+@font-face {
+    font-family: 'gothic';
+    src: url("https://fonts.googleapis.com/css?family=Gothic+A1:300");
+}
+
 .payment_body{
     margin-top: 80px;
     text-align: center;
+    border: none;
+    font-family: "gothic";
 }
 
-.payment_title{
-
+.payment_title h1{
+    font-family: "gothic";
 }
 
 .payment_list{
  
 }
 
-.payment_message_title{
-
+.payment_message_title h1{ 
+    font-family: "gothic";
 }
 
 .payment_message{
     width: 1000px;
     height: 500px;
-    background: rgba(255, 255, 0, 0.26);
+    background: #f2ecec;
 }
 
 .payment_message_input{
@@ -42,8 +49,8 @@ margin: 20px 50px;
     outline: 7px solid rgb(0, 0, 0);
 }
 
-.payment_radio_title{
-
+.payment_radio_title h1{
+    font-family: "gothic";
 }
 
 .payment_radio_img{
@@ -56,20 +63,20 @@ margin: 20px 50px;
     display: block;
 }
 
-.payment_addr{
-
+.payment_addr p{
+    font-family: "gothic";
 }
 .payment_addr_input{
-
+    font-family: "gothic";
 }
-.payment_user{
-
+.payment_user p{
+    font-family: "gothic";
 }
 .payment_user_input{
-
+    font-family: "gothic";
 }
-.payment_button{
-
+.payment_button p{
+    font-family: "gothic";
 }
 .payment_total_price{
     display: none;

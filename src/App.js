@@ -8,6 +8,7 @@ import Mypages from "./page/Mypages";
 import Product from "./Product/Product";
 import BoardMain from "./Board/BoardMain";
 import Payment from "./page/Payment";
+import PaymentTerminal from "../src/Payment/PaymentTerminal";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/board" element={<BoardMain />} />
         <Route path="/mypage" element={<Mypages />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/last" element={<PaymentTerminal />} />
       </Routes>
     </div>
   );

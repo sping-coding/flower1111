@@ -1,16 +1,18 @@
 import React from "react";
-import { useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import "./PaymentForm.css";
 import MainSecondPicChange from "../components/MainSecondPicChange";
 import img1 from "./paymentImg/ac861aeafd1e7d76cdca067b62c5be73.jpg";
 import img2 from "./paymentImg/cappuccino_rose_bouque2112t.jpg";
 import PaymentList from "./PaymentList";
-import { useNavigate, Link } from "react-router-dom";
+
 
 
 
 const PaymentForm = () => {
+
+    
 console.log("PaymentForm");
 
     var user_nickname = window.sessionStorage.getItem("nick")
@@ -19,8 +21,11 @@ console.log("PaymentForm");
 
     const [value, setValue] = useState('');
 
-    const [msgValue, setMsgValue] = useState('')
+    const [msgValue, setMsgValue] = useState('');
     
+    const [kakaoPrice, setKakaoPrice] = useState(0);
+
+
 
     const onChange = (e) => {
         setValue(e.target.value);
@@ -30,12 +35,62 @@ console.log("PaymentForm");
         
     };
 
+    console.log("kakaoPrice=>", kakaoPrice);
+
+    const [pay, setPay] = useState({
+        // 응답에서 가져올 값들
+        next_redirect_pc_url: "",
+        tid: "",
+        // 요청에 넘겨줄 매개변수들Flower Bouquets
+        params: {
+          cid: "TC0ONETIME",
+          partner_order_id: "partner_order_id",
+          partner_user_id: "partner_user_id",
+          item_name: "초코파이",
+          quantity: 1,
+          total_amount: 0,
+          vat_amount: 200,
+          tax_free_amount: 0,
+          approval_url: "http://localhost:3000/",
+          fail_url: "http://localhost:3000/",
+          cancel_url: "http://localhost:3000/",
+        },
+    });
+    const A = () => {
+        setPay(
+            ...pay,
+            pay.params.total_amount = pay.params.total_amount + kakaoPrice
+        )
+    }
+    
+    console.log("pay.params.total_amount=>",(pay.params.total_amount));
+    
+    useEffect(() => {
+        const { params } = pay;
+        axios({
+          url: "https://kapi.kakao.com/v1/payment/ready",
+          method: "POST",
+          headers: {
+            Authorization: "KakaoAK 87105da4391b25ac4286abaa508070c7",
+            "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
+          },
+          params,
+        }).then((response) => {
+          const {
+            data: { next_redirect_pc_url, tid },
+          } = response;
+          console.log("url=>", next_redirect_pc_url);
+          console.log(tid);
+          setPay({ next_redirect_pc_url, tid, params });
+        });
+      }, []);
+      const { next_redirect_pc_url } = pay;
 
 
   return (
     <div className="payment_body">
     <form>
-      <table align="center" border="1" width="85%">
+      <table align="center" width="85%">
         <tbody>
             <tr>
                 <td className="payment_title">
@@ -44,7 +99,7 @@ console.log("PaymentForm");
             </tr>
             <tr>
                 <td className="payment_list">
-                    <PaymentList />
+                    <PaymentList kakaoPrice={kakaoPrice} setKakaoPrice={setKakaoPrice}/>
                 </td>
             </tr>
             <tr>
@@ -131,11 +186,7 @@ console.log("PaymentForm");
                     />
                 </td>
             </tr>
-            <tr>
-                <td className="payment_button">
-                    <Link to="/">결제</Link>
-                </td>
-            </tr>
+            <a href="http://localhost:3000/last">결제</a>
         </tbody>
       </table>
     </form>

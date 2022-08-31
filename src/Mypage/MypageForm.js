@@ -5,8 +5,9 @@ import { BsFillArrowRightCircleFill, BsBoxSeam, BsTruck } from "react-icons/bs";
 import { FaBoxOpen } from "react-icons/fa";
 import Blog from "./마이페이지블로그.png";
 import Face from "./마이페이지face.png";
-import Kaka from "./마이페이지카카오.png";
+import Kaka from "./카카오링크.png";
 import Navr from "./마이페이지네이버.png";
+import MyBack from "./마이페이지배경.png";
 
 const MypageForm = () => {
   const usernick = window.sessionStorage.getItem("nick");
@@ -60,12 +61,14 @@ const MypageForm = () => {
             <p className="MypageDD">고객님께 상품이 배송되었습니다.</p>
           </div>
         </div>
+        <h3>주문조회</h3>
         <div className="MyPageLook">
-          <h3>주문조회</h3>
-          <PaymentList />
+          <div className="Mypageitemsss">
+            <PaymentList />
+          </div>
         </div>
       </div>
-      <div className="MypageInform">
+      {/* <div className="MypageInform">
         <div className="MypageInformCall">
           <h5>- 대표전화 -</h5>
           <div className="MypageInformCallSS">
@@ -95,6 +98,14 @@ const MypageForm = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="MypageBackground">
+        <img className="MypageBackgroundsss" src={MyBack} />
+        <img className="MypageBlogSNS" src={Blog} />
+        <img className="MypageFaceSNS" src={Face} />
+        <a href="https://pf.kakao.com/_fRXlxj" target="_blank">
+          <img className="MypageKAKA" src={Kaka} />
+        </a>
       </div>
     </div>
   );

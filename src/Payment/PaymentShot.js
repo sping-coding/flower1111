@@ -1,26 +1,38 @@
 import React from "react";
+import "./PaymentShot.css";
 
-const PaymentShot = ({ paymentlist }) => {
+const PaymentShot = ({ paymentlist, }) => {
+
   var paymentTotalPrice = 0;
+  const paymentSaveData = () => {
+    sessionStorage.setItem("totalPrice", paymentTotalPrice)
+  };
 
-  console.log("PaymentShot(paymentList) =>", paymentlist.paymentList);
   return (
-    <div>
+    <div className="divInline">
       {paymentlist.paymentList?.map((pay) => (
-        <div className="payList">
-          <div className="payLists">주문번호 : {pay.num}</div>
-          <div className="payLists payListsimg">
-            <img src={pay.image_url} width="50px" height="50px" />
+        <div className="paymentTotalShot">
+          
+          <div className="paymentText">
+          <hr/>
+          <br/>
+            <img src={pay.image_url} className="paymentShotImage" width="200px" height="200px" />
+          <p>
+          {pay.irum}
+          </p>
+          <p className="paymentText_p">
+          {pay.price}원 ({pay.quantity}ea)
+          </p>
+          <hr/>
           </div>
-          <div className="payLists">상품이름 : {pay.irum}</div>
-          <div className="payLists">갯수 : {pay.quantity}</div>
-          <div className="payLists">가격 : {pay.price}</div>
-          <div className="payment_total_price">
+          <div className="paymentPlus">
             {(paymentTotalPrice = paymentTotalPrice + parseInt(pay.price))}
+            
           </div>
         </div>
       ))}
       <div>총 가격 : {paymentTotalPrice}</div>
+      {paymentSaveData()}
     </div>
   );
 };
