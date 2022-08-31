@@ -6,50 +6,38 @@
     font-family: 'gothic';
     src: url("https://fonts.googleapis.com/css?family=Gothic+A1:300");
 }
+.divInline{
+    background-color: white;
+    padding: 25px;
+    border: 3px solid rgba(185, 185, 185, 0.233);
+}
 .paymentText p{
     font-size: 20px;
     font-family: "gothic";
     font-weight: lighter;
     letter-spacing: 1px;
 }
-.paymentText_p{
-    letter-spacing: 1px;
-}
 .paymentText{
     padding: 15px;
 
 }
-
+.paymentText_p{
+    letter-spacing: 1px;
+}
 .paymentTotalShot{
     display: inline-block;
     width: 23%;
     margin: 20px 40px 30px 40px;
 }
-
-.paymentTableImg{
-    
-    border: 1px solid black;
-}
-.paymentTableIrum{
-    border: 1px solid black;
-    width: 160px;
-    line-height: 120px;
-    font-size: 22px;
+.totalText{
     font-family: "gothic";
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: block;
+    border-bottom: 1px solid rgb(206, 206, 206);
 }
-.paymentTableQuantity{
-    border: 1px solid black;
-    width: 120px;
-    line-height: 120px;
-    font-size: 22px;
-    font-family: "gothic";
-}
-.paymentTablePrice{
-    border: 1px solid black;
-    line-height: 120px;
-    width: 100px;
-    font-size: 22px;
-    font-family: "gothic";
+.totalText{
+    padding: 13px 0;
 }
 .paymentPlus{
     display: none;

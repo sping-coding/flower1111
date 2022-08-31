@@ -25,7 +25,6 @@
 //   });
 //   console.log("price=>", kakaoPrice);
 
-
 //   const callKakao = (e) => {
 //     alert("AAAA");
 //     e.preventDefault();
@@ -74,11 +73,11 @@
 
 // export default Kakaopay;
 
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./PaymentTerminal.css";
 
-const Kakaopay = ({lastnum}) => {
+const Kakaopay = ({ lastnum }) => {
   const [pay, setPay] = useState({
     // 응답에서 가져올 값들
     next_redirect_pc_url: "",
@@ -122,8 +121,8 @@ const Kakaopay = ({lastnum}) => {
   const { next_redirect_pc_url } = pay;
 
   return (
-    <div>
-      <a href={next_redirect_pc_url}>{next_redirect_pc_url}</a>
+    <div className="kakaoA">
+      <a href={next_redirect_pc_url}>온 국민이 다 쓰는 카카오페이</a>
     </div>
   );
 };

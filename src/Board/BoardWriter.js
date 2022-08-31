@@ -20,6 +20,7 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
   //   handlelist();
 
   const handleInsert = (e) => {
+    handlelist();
     openModal(modal);
     // e.preventDefault();
     console.log("Insert =", titleRef.current.value);
@@ -47,7 +48,6 @@ const BoardWriter = ({ handlelist, modal, openModal }) => {
       .catch((e) => {
         console.error(e);
       });
-    handlelist();
   };
 
   return (
