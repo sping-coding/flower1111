@@ -53,7 +53,7 @@ const MypageForm = () => {
               <BsFillArrowRightCircleFill size="37" />
             </div>
             <div className="MypageD">
-              <p>배송중</p>
+              <p className="MypageDDB">배송중</p>
               <BsTruck size="37" />
               <p className="MypageDD">택배사로 상품이 전달되었습니다.</p>
             </div>
@@ -61,7 +61,7 @@ const MypageForm = () => {
               <BsFillArrowRightCircleFill size="37" />
             </div>
             <div className="MypageD">
-              <p>배송완료</p>
+              <p className="MypageDDB">배송완료</p>
               <FaBoxOpen size="37" />
               <p className="MypageDD">고객님께 상품이 배송되었습니다.</p>
             </div>

@@ -4,32 +4,27 @@
 }
 
 .payment_body{
-    margin-top: 80px;
+    margin-top: 75px;
     text-align: center;
     border: none;
     font-family: "gothic";
+    
+    letter-spacing: 1px;
 }
 
 .payment_title h1{
     font-family: "gothic";
+    padding-top: 50px;
+    font-weight: 500;
+    height: 150px;
+    line-height: 75px;
 }
 
-.payment_list{
- 
-}
 
 .payment_message_title h1{ 
     font-family: "gothic";
-}
-
-.payment_message{
-    width: 1000px;
-    height: 500px;
-    background: #f2ecec;
-}
-
-.payment_message_input{
-
+    padding: 30px 0 30px 0;
+    color: #3b3333;
 }
 
 [type=radio] { 
@@ -46,15 +41,12 @@ margin: 20px 50px;
 }
 
 [type=radio]:checked + img {
-    outline: 7px solid rgb(0, 0, 0);
+    outline: 7px solid rgba(0, 0, 0, 0.753);
 }
 
 .payment_radio_title h1{
     font-family: "gothic";
-}
-
-.payment_radio_img{
-
+    padding: 30px;
 }
 
 .payment_img{
@@ -63,21 +55,41 @@ margin: 20px 50px;
     display: block;
 }
 
-.payment_addr p{
+.payment_input{
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.432);
+    /* background-color: rgb(241, 241, 241); */
+    width: 40%;
+    height: 40px;
+    margin: 30px 0;
+    border-radius: 2px;
     font-family: "gothic";
+    font-size: 18px;
+    letter-spacing: 2px;
+    
+    text-align: center;
 }
-.payment_addr_input{
+.payment_p{
     font-family: "gothic";
-}
-.payment_user p{
-    font-family: "gothic";
-}
-.payment_user_input{
-    font-family: "gothic";
-}
-.payment_button p{
-    font-family: "gothic";
+    font-size: 20px;
+    margin: 0;
 }
 .payment_total_price{
     display: none;
+}
+.lastLink{
+    text-decoration: none;
+    font-style: none;
+    font-family: "gothic";
+    font-size: 28px;
+    color: black;
+    display: block;
+    border: 1px solid black;
+    width: 400px;
+    height: 50px;
+    margin: 40px auto;
+    margin-bottom: 80px;
+}
+.lastLink:hover{
+    color: black;
 }
