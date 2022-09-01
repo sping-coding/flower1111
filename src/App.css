@@ -4,11 +4,16 @@
   font-family: 'gothic';
   src: url("https://fonts.googleapis.com/css?family=Gothic+A1:300");
 }
-
-*{
-  box-sizing: border-box;
-  font-family: 'Nanum Gothic', sans-serif;
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+*{
+  font-family: 'RIDIBatang';
+}
+
 .MainHeader{
   display: flex;
   justify-content: center;
@@ -279,6 +284,7 @@
   padding-top: 7px;
   display: block;
   width: 87%;
+  padding-top: 0px;
   object-fit: 100%;
   height: auto;
 }

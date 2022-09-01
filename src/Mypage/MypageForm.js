@@ -28,16 +28,16 @@ const MypageForm = () => {
           <div className="MyPagesDet">
             <div className="MyPagesDetF">
               <div className="MyPagesDetID">
-                <p>아이디 &nbsp;|</p>
+                <p className="MypageMargintop">아이디 &nbsp;|</p>
                 <p>{userid}</p>
               </div>
               <div className="MyPagesDetTel">
-                <p>전화번호&nbsp; |</p>
+                <p className="MypageMargintop">전화번호&nbsp; |</p>
                 <p>{usertel}</p>
               </div>
             </div>
             <div className="MyPagesDetAddr">
-              <p>주소지&nbsp; |</p>
+              <p className="MypageMargintop">주소지&nbsp; |</p>
               <p>{useraddr}</p>
             </div>
           </div>

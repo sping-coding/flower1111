@@ -2,9 +2,16 @@
     font-family: 'gothic';
     src: url("https://fonts.googleapis.com/css?family=Gothic+A1:300");
 }
-*{
-    font-family: 'gothic';
-}
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  *{
+    font-family: 'RIDIBatang';
+  }
+  
 .MyPages{
     margin-top: 150px;
     display: flex;
@@ -58,9 +65,9 @@
 .MyPagesDetID{
     display: flex;
 }
+
 .MyPagesDetID p{
     margin-right:10px;
-    
 }
 .MyPagesDetTel{
     display: flex;
@@ -107,6 +114,7 @@
 .MypageDDB{
     font-weight: 700;
     margin-bottom: 15px;
+    padding-top: 10px;
 }
 .MypageDD{
     padding-top: 25px;
