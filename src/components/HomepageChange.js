@@ -34,7 +34,7 @@ const HomepageChange = () => {
 
   return (
     <div className="HomepageChanges">
-      <h2>Pick your favorite</h2>
+      <h2>Pick Your Favorite</h2>
       <div className="mainChange">
         <button className="HomepageChangeBtnF" onClick={() => play("first")}>
           Box

@@ -10,7 +10,7 @@ const PaymentTurminal = () => {
       <div className="PaymentBoxBack">
         <div className="PaymentBoxTitle">
           <h3>
-            <span>GAI</span> 결제
+            <span>HUN</span> 결제
           </h3>
           <p>안전하고 편리한 결제 서비스</p>
         </div>
@@ -86,7 +86,7 @@ const PaymentTurminal = () => {
       </div>
       <div className="PaymentsideBox">
         <div className="PaymentsideBoxF">
-          <h3>GAI결제</h3>
+          <h3>HUN결제</h3>
           <p>X</p>
         </div>
         <div className="PaymentsideBoxS">

@@ -38,6 +38,8 @@ const MypageForm = () => {
             <p>{usertel}</p>
           </div>
         </div>
+
+        <h3>주문조회</h3>
         <div className="MypageDelivers">
           <div className="MypageD MypageDBlue">
             <p className="MypageDDB">발송준비중</p>
@@ -61,13 +63,14 @@ const MypageForm = () => {
             <p className="MypageDD">고객님께 상품이 배송되었습니다.</p>
           </div>
         </div>
-        <h3>주문조회</h3>
-        <div className="MyPageLook">
-          <div className="Mypageitemsss">
-            <PaymentList />
-          </div>
+      </div>
+
+      <div className="MyPageLook">
+        <div className="Mypageitemsss">
+          <PaymentList />
         </div>
       </div>
+
       {/* <div className="MypageInform">
         <div className="MypageInformCall">
           <h5>- 대표전화 -</h5>
