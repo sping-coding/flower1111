@@ -80,6 +80,7 @@
   padding-top: 10px;
   font-weight: 400;
   font-size: 23px;
+  letter-spacing: 2px;
 
 }
 .MainSecondHeaderItems h3{
@@ -87,7 +88,7 @@
   padding-top: 40px;
   text-align: center;
   font-size: 80px;
-  font-weight: 400;
+  font-weight: lighter;
   color: #b98966;
   font-family: "Taviraj";
 }
@@ -285,10 +286,10 @@
 .swiper-slide img {
   padding-top: 7px;
   display: block;
-  width: 87%;
+  width: 100%;
   padding-top: 0px;
   object-fit: 100%;
-  height: auto;
+  height: 700px;
 }
 
 /* 이달의 꽃 */
@@ -390,7 +391,8 @@
   background-color: #d7c9c9;
   color: white;
   border: none;
-  font-family:"Taviraj";
+  font-weight: 800;
+
   /* transition: 0.5s ease-out; */
   
   border-top-left-radius: 20px;
@@ -409,12 +411,12 @@
   font-size: 27px;
   cursor: pointer;
   background-color: #f2ecec;
-  color: black;
+  color: #9f9696;
   border: none;
   /* transition: 0.5s ease-out; */
   /* border-top-right-radius: 20px; */
   border-top-right-radius: 20px;
-  font-family:"Taviraj";
+  font-weight: 800;
 }
 /* .HomepageChangeBtnS:hover{
   font-size: 37px;
@@ -472,7 +474,7 @@ footer .menu li:last-child::before {
 footer .menu li a {
   display: block;
   color: #CCC;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   padding: 15px;
 }
@@ -514,6 +516,10 @@ footer .logo {
   margin-right: 9px;
   color: white;
   text-decoration: none;
+}
+.footerA:hover{
+  text-decoration: none;
+  color: white;
 }
 
 

@@ -122,7 +122,7 @@ const Kakaopay = ({ lastnum }) => {
 
   return (
     <div className="kakaoA">
-      <a href={next_redirect_pc_url}>온 국민이 다 쓰는 카카오페이</a>
+      <a href={next_redirect_pc_url}>카카오페이</a>
     </div>
   );
 };

@@ -1,25 +1,23 @@
 import React from "react";
-import "./MainSecondPicChange.css"
+import "./MainSecondPicChange.css";
+import logo from "../images/mainLLLogo.png";
 
-const MainSecondPicChange = ({onChange, msgValue}) => {
+const MainSecondPicChange = ({ onChange, msgValue }) => {
   return (
-    <div>
-      <section className="reserve-store">
-        <div className="MainSecondSide"></div>
-        <div className="inner">
-          <div className="medal">
-            <div className="front">
-              <div className="messagetext">
-                {msgValue}
-              </div>
-            </div>
-            <div className="back">
-              <h2 className="messagetext">CAERULEA</h2>
+    <div className="reserve-store">
+      <div className="inner">
+        <div className="medal">
+          <div className="front">
+            <div className="messagetext">
+              <p>{msgValue}</p>
             </div>
           </div>
+          <div className="back">
+            <img src={logo} />
+          </div>
         </div>
-        <div className="MainSecondSide"></div>
-      </section>
+      </div>
+      <div className="MainSecondSide"></div>
     </div>
   );
 };

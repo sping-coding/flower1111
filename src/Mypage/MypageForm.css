@@ -9,7 +9,7 @@
     font-style: normal;
   }
   *{
-    font-family: 'RIDIBatang';
+    font-family: 'gothic';
   }
   
 .MyPages{
@@ -34,13 +34,14 @@
 .MyPagesWelF{
     font-size: 47px;
     padding-top: 20px;
+    font-family: "Taviraj";
 }
 .MypageDates{
     display:flex;
     flex-direction: column;
     width: 80%;
     align-items: center;
-    border: 3px solid black;
+    border: 3px solid #f2ecec;
 }
 
 .MyPagesDet{

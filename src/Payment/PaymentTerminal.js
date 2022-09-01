@@ -2,6 +2,8 @@ import Kakaopay from "./KakaoPay";
 import React from "react";
 import "./PaymentTerminal.css";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import kakaologo from "./카카오로고.png";
+import naverlogo from "./네이버로고.jpg";
 
 const PaymentTurminal = () => {
   const lastnum = window.sessionStorage.getItem("totalPrice");
@@ -18,10 +20,13 @@ const PaymentTurminal = () => {
         <div className="PaymentBox">
           <div className="PaymentBoxOne">
             <div className="PaymentBoxOneFirst" type="button">
+              <img src={kakaologo} />
+
               <Kakaopay lastnum={lastnum} />
             </div>
             <div className="PaymentBoxOneSecond" type="button">
-              네이버페이로 결제하세요
+              <img src={naverlogo} />
+              네이버페이
             </div>
           </div>
 

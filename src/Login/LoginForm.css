@@ -11,9 +11,9 @@
 }
 .LoginForms h1{
     margin-bottom: 70px;
-    font-size: 57px;
+    font-size: 60px;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-family: 'gothic';
 }
 
@@ -22,10 +22,10 @@
 .ID{
     border: none;
     border-bottom: 3px solid grey;
-    height: 20px;
-    width: 200px;
+    height: 30px;
+    width: 250px;
     background-color: whitesmoke(197, 191, 191);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-bottom: 2px;
 }
 .ID:focus{
@@ -35,8 +35,8 @@
 .PW{
     border: none;
     border-bottom: 3px solid grey;
-    height: 20px;
-    width: 200px;
+    height: 30px;
+    width: 250px;
     background-color: whitesmoke(197, 191, 191);
     padding-bottom: 2px;
 }

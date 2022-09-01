@@ -46,7 +46,7 @@ const LoginForm = () => {
           navigate("/");
         } else {
           alert("로그인 실패");
-          navigate("/");
+          navigate("/login");
         }
       })
 

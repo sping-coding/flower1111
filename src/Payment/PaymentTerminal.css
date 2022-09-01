@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-color: #f2ecec;
 }
 .PaymentBoxBack{
     display: flex;
@@ -45,11 +45,17 @@
    width: 770px;
    height: 50px;
    margin-top: 20px;
+   font-weight: 500;
    border: 1px solid yellow;
    display: flex;
    justify-content: center;
    align-items: center;
    font-size: 25px;
+   border-radius: 5px;
+   background-color: #EDD600;
+}
+.PaymentBoxOneFirst img{
+    width: 30px;
 }
 
 .PaymentBoxOneSecond{
@@ -60,7 +66,13 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    
+    border-radius: 5px;  
+    background-color: #52A745;
+    color: white;
+}
+.PaymentBoxOneSecond img{
+    width: 30px;
+    padding-right: 3px;
 }
 .PaymentBoxTwo{
     display: flex;
@@ -120,6 +132,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    cursor: pointer;
 }
 .PaymentsideBox{
     width: 300px;
@@ -134,7 +147,7 @@
     width: 270px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     
 }
 .PaymentsideBoxF h3{
@@ -147,7 +160,7 @@
     padding-bottom: 5px;
     margin-bottom: 0px;
     font-size: 35px;
-    color: white;
+    color: black;
     font-weight: 600;
 }
 .PaymentsideBoxS{
@@ -158,7 +171,7 @@
 }
 .PaymentsideBoxS h4{
     font-size: 20px;
-    color: white;
+    color: black;
 }
 .PaymentsideBoxT{
     display: flex;
@@ -167,7 +180,7 @@
 }
 .PaymentsideBoxT h4{
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .kakaoA a{

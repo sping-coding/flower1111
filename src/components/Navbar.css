@@ -47,13 +47,16 @@
     
     border: none;
     background-color: #cfcaca;
-    font-size: 28px;
+    font-size: 27px;
     color: black;
     letter-spacing: 2px;
     font-weight: 500;
     margin-right: 17px;
+    font-family: "Taviraj";
+    
     
 }
+
 /* .MainMenu button:hover{
     color: ghostwhite;
     font-size: 35px;

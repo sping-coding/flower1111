@@ -58,18 +58,16 @@ const Navbar = () => {
             COMMUNITY
           </button>
           {/* <span>I</span> */}
-          <button className="NavbarBtn">
-            <Dropdown>
-              <Dropdown.Toggle variant="dark">
-                <BsPerson className="navPerson" size="27px" />
-              </Dropdown.Toggle>
 
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={goToLogin}>로그인</Dropdown.Item>
-                <Dropdown.Item onClick={goToMember}>회원가입</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </button>
+          <Dropdown>
+            <Dropdown.Toggle variant="dark">
+              <BsPerson className="navtoggle" size="27px" />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={goToLogin}>로그인</Dropdown.Item>
+              <Dropdown.Item onClick={goToMember}>회원가입</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
     );
@@ -81,24 +79,27 @@ const Navbar = () => {
         </div>
         <div className="MainMenu">
           <div>
-          <button classname="navlink" onClick={goToProduct}>SHOP</button>
-          <button classname="navlink" onClick={goToBoard}>COMMUNITY</button>
+            <button classname="navlink" onClick={goToProduct}>
+              SHOP
+            </button>
+            <button classname="navlink" onClick={goToBoard}>
+              COMMUNITY
+            </button>
           </div>
-          
-            <Dropdown>
-              <Dropdown.Toggle variant="dark">
-                <BsPersonFill className="navPerson" />
-              </Dropdown.Toggle>
-              <div className="navtoggle">
+
+          <Dropdown>
+            <Dropdown.Toggle variant="dark">
+              <BsPersonFill className="navPerson" />
+            </Dropdown.Toggle>
+            <div className="navtoggle">
               <Dropdown.Menu>
                 <Dropdown.Item>{usernick} 님 환영합니다</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={handleLogout}>로그아웃</Dropdown.Item>
                 <Dropdown.Item onClick={gotoMypage}>마이페이지</Dropdown.Item>
               </Dropdown.Menu>
-              </div>
-            </Dropdown>
-          
+            </div>
+          </Dropdown>
         </div>
       </div>
     );

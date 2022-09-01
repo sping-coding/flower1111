@@ -112,6 +112,7 @@ const PaymentForm = () => {
                   id="msg_input"
                   type="text"
                   name="msg_input"
+                  className="payment_input"
                   onChange={onChange}
                   value={msgValue}
                   placeholder="마음을 전할 메세지를 작성하세요."
@@ -135,12 +136,12 @@ const PaymentForm = () => {
                 </label>
               </td>
             </tr>
-            <tr>
-              <td className="payment_p">
+            <tr className="payment_pFirst">
+              <td className="payment_p ">
                 <p>주소</p>
               </td>
             </tr>
-            <tr>
+            <tr className="payment_pFirst">
               <td>
                 <input
                   type="text"
@@ -151,7 +152,7 @@ const PaymentForm = () => {
                 />
               </td>
             </tr>
-            <tr>
+            <tr className="payment_pFirst">
               <td className="payment_p">
                 <p>전화번호</p>
               </td>
