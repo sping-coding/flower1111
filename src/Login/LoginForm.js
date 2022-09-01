@@ -64,7 +64,7 @@ const LoginForm = () => {
       <div className="LoginForm">
         <div className="LoginForms" align="center">
           <form>
-            <h1>login</h1>
+            <h1>Login</h1>
             <div>
               <input
                 className="ID"

@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap');
+@font-face {
+    font-family: 'gothic';
+    src: url("https://fonts.googleapis.com/css?family=Gothic+A1:300");
+  }
 .MFormsBack{
     display: flex;
     justify-content: center;
@@ -42,15 +46,18 @@
 .MFormsBtns{
     display: flex;
     justify-content: center;
+    
 }
 .MFormsBtn{
     border: none;
-    background-color: #595959;
+    background-color: #f2ecec;
     border-radius: 10px;
     height: 40px;
     width: 120px;
     margin: 10px;
-    color: white;
+    color: gray;
+    font-size: 17px;
+    font-family: 'gothic';
 }
 .HTextAlign{
     text-align: center;
@@ -70,4 +77,7 @@
 .InputGoCenter{
     display: flex;
     justify-content: center;
+}
+.agreement_Form label, .agreement_Form p, .agreement_Form  input, .agreement_Form  span, .agreement_Form  a{
+    font-family: 'gothic';
 }

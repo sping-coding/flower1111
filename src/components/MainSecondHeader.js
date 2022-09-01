@@ -6,7 +6,7 @@ import 두번째포장지 from "../images/두번째포장지3.webp";
 const MainSecondHeader = () => {
   return (
     <div className="MainSecondHeaderItems">
-      <h1>ABOUT CAERULEA</h1>
+      <h3>ABOUT CAERULEA</h3>
       <div className="MainSecondHeaderItemsPics">
         <div className="MainSecondHeaderItemsFlower">
           <img src={두번째꽃} />
