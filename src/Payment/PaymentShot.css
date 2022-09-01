@@ -9,7 +9,7 @@
 .divInline{
     background-color: white;
     padding: 25px;
-    border: 3px solid rgba(185, 185, 185, 0.233);
+    border: none;
 }
 .paymentText p{
     font-size: 20px;

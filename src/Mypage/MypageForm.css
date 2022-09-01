@@ -2,6 +2,9 @@
     font-family: 'gothic';
     src: url("https://fonts.googleapis.com/css?family=Gothic+A1:300");
 }
+*{
+    font-family: 'gothic';
+}
 .MyPages{
     margin-top: 150px;
     display: flex;
@@ -12,27 +15,38 @@
 
 .MyPagesWel{
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    width: 80%;
+    justify-content: space-between;
 }
-.MyPagesWel p{
-    font-size: 30px;
+.MyPagesWel {
+    font-size: 57px;
     padding: 0;
     font-family: "gothic";
-    margin: 20px;
+    margin-bottom: 0px;
+}
+.MyPagesWelF{
+    font-size: 47px;
+    padding-top: 20px;
+}
+.MypageDates{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    border: 3px solid black;
 }
 
-
-
 .MyPagesDet{
-    width: 70%;
-    font-size: 20px;
+    width: 80%;
+    font-size: 25px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 60px;
-    padding-top: 10px;
-    font-family: "gothic";
+    padding-top: 20px;
+}
+.MyPagesDetF{
+    display: flex;
+    justify-content: space-between;
 }
 .MyPagesDetAddr{
     display: flex;
@@ -73,7 +87,7 @@
 }
 
 .MypageDelivers{
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 60px;
